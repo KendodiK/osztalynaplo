@@ -14,17 +14,17 @@ table subjects
 	id
 	subject name
 
+table teachers
+	id
+	name
+	subject id
+
 table marks
 	id
 	date time
 	student id
 	subject id
 	mark
-
-table teachers
-	id
-	name
-	subject
 
 table connect_subjects_students
 	id
@@ -35,3 +35,6 @@ table connect connect_subject_teachers
 	id
 	teacher id
 	group id
+
+
+composer require --dev kovacs-laci/laravel-skeleton s?
