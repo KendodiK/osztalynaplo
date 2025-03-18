@@ -1,0 +1,37 @@
+table groups
+	id
+	class num
+	class sign
+	started at
+
+table students
+	id
+	name
+	gender
+	group id
+
+table subjects
+	id
+	subject name
+
+table marks
+	id
+	date time
+	student id
+	subject id
+	mark
+
+table teachers
+	id
+	name
+	subject
+
+table connect_subjects_students
+	id
+	student id
+	subject id
+
+table connect connect_subject_teachers
+	id
+	teacher id
+	group id
