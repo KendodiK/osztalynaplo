@@ -25,6 +25,8 @@ class TeacherSeeder extends Seeder
             $tanarok[] = [  // Helyes tömb hozzáadás
                 'name' => $data[1] ?? null,  
                 'class_id' => $data[2] ?? null,
+                'username' => $data[3] ?? null,
+                'identification_code' => $data[4] ?? null,
                 
             ];
         }
@@ -36,6 +38,8 @@ class TeacherSeeder extends Seeder
             $teacher = new Teacher();
             $teacher->name = $tanar['name'];
             $teacher->class_id = $tanar['class_id'];
+            $teacher->username = $tanar['username'];
+            $teacher->identification_code = $tanar['identification_code'];
             $teacher->save();
         }
     }

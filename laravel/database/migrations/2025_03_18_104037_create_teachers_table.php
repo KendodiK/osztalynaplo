@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name', 30);
             $table->unsignedBigInteger('class_id');
             $table->foreign('class_id')->references('id')->on('groups');
+            $table->string('username',30);
+            $table->string('identification_code',5);
         });
     }
 
