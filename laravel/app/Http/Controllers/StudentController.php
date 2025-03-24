@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -60,5 +61,18 @@ class StudentController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public  function login()
+    {
+        $students = Student::all();
+        $name = request('name');
+        $class = request('class');
+        foreach ($students as $student) {
+            if ($student->name == $name && $student->class == $class) {
+                return view('studentPage.index', compact('student'));
+            }
+        }
+        return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
     }
 }

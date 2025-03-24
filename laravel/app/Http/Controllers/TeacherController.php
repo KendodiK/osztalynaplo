@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\teacher;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -59,6 +60,19 @@ class TeacherController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+    }
+
+    public  function login()
+    {
+        $teachers = Teacher::all();
+        $name = request('name');
+        $code = request('code');
+        foreach ($teachers as $teacher) {
+            if ($teacher->name == $name && $teacher->identification_code == $code) {
+                return view('teacherPage.index', compact('teacher'));
+            }
+        }
+        return view('teacherPage.login')->with('errors', 'Nincs a megadottaknak megfelelő tanár');
     }
 }
