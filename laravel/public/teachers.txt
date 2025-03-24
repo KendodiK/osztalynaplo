@@ -1,0 +1,16 @@
+1;Kiss Péter;1  
+2;Nagy Andrea;1  
+3;Szabó László;2  
+4;Tóth Katalin;2  
+5;Varga Gergely;3  
+6;Horváth Zsuzsa;3  
+7;Molnár Dániel;4  
+8;Balogh Ágnes;4  
+9;Farkas Tamás;5  
+10;Papp Mária;6  
+11;Juhász Attila;7  
+12;Sipos Orsolya;8  
+13;Németh Zoltán;9  
+14;Simon Judit;10  
+15;Fodor Bence;6  
+16;Lakatos Anna;7  

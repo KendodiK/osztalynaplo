@@ -1,0 +1,10 @@
+1;Matematika  
+2;Magyar nyelv és irodalom  
+3;Történelem  
+4;Angol nyelv  
+5;Fizika  
+6;Kémia  
+7;Biológia  
+8;Földrajz  
+9;Informatika  
+10;Testnevelés  
