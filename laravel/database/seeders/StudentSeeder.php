@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Student;
 
 class StudentSeeder extends Seeder
 {
@@ -12,24 +13,34 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        $students = [];
+        $students = array();
 
-        if (($handle = fopen("students.txt", "r")) !== FALSE) {
-            while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-                $students[] = [
-                    "name" => $data[1],
-                    "gender" => $data[2],
-                    "classId" => (int)$data[3]
-                ];
-            }
-            fclose($handle);
-        }
-        else{
-            echo "Valami hiba történt a tanulók beolvasásakor";
-        }
-        
-        foreach ($students as $student) {
+
+        $handle = fopen(public_path("students.txt"), "r");
+
+        while (($line = fgets($handle)) !== false) {
+            $data = explode(';', trim($line)); // Trim, hogy eltávolítsuk az extra whitespace-t
+
             
+
+            $students[] = [  // Helyes tömb hozzáadás
+                'name' => $data[1] ?? null,  
+                'gender' => $data[2] ?? null,
+                'group_id' => $data[3] ?? null,
+            ];  
+        }
+
+        fclose($handle);
+        
+        
+
+        foreach ($students as $stud) {
+            
+            $student = new Student();
+            $student->name = $stud['name'];
+            $student->gender = $stud['gender'];
+            $student->group_id = $stud['group_id'];
+            $student->save();
         }
     }
 }

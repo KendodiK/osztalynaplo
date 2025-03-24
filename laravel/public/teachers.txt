@@ -10,7 +10,7 @@
 10;Papp Mária;6  
 11;Juhász Attila;7  
 12;Sipos Orsolya;8  
-13;Németh Zoltán;9  
-14;Simon Judit;10  
+13;Németh Zoltán;4
+14;Simon Judit;1 
 15;Fodor Bence;6  
 16;Lakatos Anna;7  
