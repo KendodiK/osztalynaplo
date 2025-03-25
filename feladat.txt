@@ -38,3 +38,21 @@ table connect connect_subject_teachers
 
 
 composer require --dev kovacs-laci/laravel-skeleton s?
+
+Diák oldal:
+	összes jegyek (kapás ideje)
+	tantárgyra lebontott jegyek (egy-egy aloldal)
+	osztályátlag (menüben fent)
+
+Tanár oldala:
+	osztályai, diákok nevével listázva (egy-egy aloldal)
+		jegyek, jegy hozzáadása (táblázatban, mint KRÉTA-ban)
+
+szügséges rout-ok:
+ Diákokhoz:
+	diák id-hez tartozó összes jegy (az id a bejelentkezésből derül ki)
+	egy-egy tantárhoz tartozó osztály átlag
+ Tanárhoz:
+	osztályok listája (összekötő táblából)
+	az osztályokhoz tartozó diákok neve, jegyei (csak a tanár által tanított tantárgyból) listázva
+	jegy hozzáadása, törlése
