@@ -14,10 +14,18 @@
 </head>
 
 <body>
-<main>
-    <div class="login-center">
-        @yield('content')
+<header>
+    <div class="menu">
+        <nav>
+            <ul class="menuUL">
+                <li></li>
+                <li><a href="{{ route('home') }}">Kilépés</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
+<main>
+    @yield('content')
 </main>
 </body>
 </html>
