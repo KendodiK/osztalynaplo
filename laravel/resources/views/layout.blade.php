@@ -14,17 +14,10 @@
 </head>
 
 <body>
-<header>
-    <div class="menu">
-        <nav>
-            <ul class="menuUL">
-                <li><a href="{{ route('home') }}">Kilépés</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <main>
-    @yield('content')
+    <div class="login-center">
+        @yield('content')
+    </div>
 </main>
 </body>
 </html>

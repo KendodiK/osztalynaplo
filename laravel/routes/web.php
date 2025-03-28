@@ -5,7 +5,7 @@ use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('layout');
 })->name('home');
 
 Route::get('/login/student', function () {return view('studentPage.login');})->name('loginStudent');
