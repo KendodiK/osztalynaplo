@@ -24,6 +24,25 @@ a {
     margin: 1%;
 }
 
+.login-element {
+    border: 1px solid red;
+    background-color: #62605b;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 3%;
+    width: 60%;
+    height: 30%;
+    font-size: large;
+}
+
+.login-element::placeholder{
+    color: white;
+}
+
+.login {
+
+}
+
 .login-center {
     margin-left: 30vw;
     margin-right: 30vw;
