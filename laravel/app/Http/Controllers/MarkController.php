@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Models\Mark;
 use Illuminate\Support\Facades\View;
@@ -35,22 +36,14 @@ class MarkController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(array $student)    
+    public function show()
     {
-        $id = $student->id; // nem jó hogy szopjál le
-        $marks = Mark::all();
-        $jegyek = [];
-        foreach ($marks as $mark) {
-            if($id==$mark->student_id){
-                $jegyek[] =[
-                    'given_at' => $mark->given_at,
-                    'subject_id' => $mark->subject_id,
-                    'mark' => $mark->mark,
-                ];
-            };
+        $student = session('student');
+        if ($student) {
+            $id =  $student['id'];
         }
-        dump($jegyek);
-        return view( 'studentPage.index', compact('jegyek'));
+        $marks = Mark::where('student_id', $id)->get();
+        return view( 'studentPage.index', compact('marks'));
 
     }
 
