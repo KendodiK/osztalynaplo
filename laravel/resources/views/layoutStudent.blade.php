@@ -18,8 +18,7 @@
     <div class="menu">
         <nav>
             <ul class="menuUL">
-                <li><a href="{{route('student.marks')}}"></a></li>
-                <li><a href="{{route('student.groupMarks')}}"></a></li>
+                <li><a href="{{route('student.marks')}}">Jegyek listája</a></li>
                 <li><a href="{{ route('home') }}">Kilépés</a></li>
             </ul>
         </nav>
