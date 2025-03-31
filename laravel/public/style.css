@@ -27,6 +27,7 @@ a {
 .login-element {
     border: 1px solid red;
     background-color: #62605b;
+    color: white;
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 3%;
@@ -40,7 +41,20 @@ a {
 }
 
 .login {
+    background: rgb(43, 43, 43);
+    border: 1px solid red;
+    color: #9c9c9c;
+    text-align: center;
+    font-size: large;
+    width: 20%;
+    height: 20%;
+    margin-top: 3%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
 
+.login:hover {
+    color: white;
 }
 
 .login-center {
