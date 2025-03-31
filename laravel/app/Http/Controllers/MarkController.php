@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Models\Mark;
+use App\Models\Subject;
 use Illuminate\Support\Facades\View;
 
 class MarkController extends Controller
@@ -35,24 +37,15 @@ class MarkController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(array $student)    
+    public function show()
     {
-        $id = $student; 
-        dump($id);
-        $marks = Mark::all();
-        $jegyek = [];
-        foreach ($marks as $mark) {
-            if($id==$mark->student_id){
-                $jegyek[] =[
-                    'given_at' => $mark->given_at,
-                    'subject_id' => $mark->subject_id,
-                    'mark' => $mark->mark,
-                ];
-            };
+        $student = session('student');
+        if ($student) {
+            $id =  $student['id'];
         }
-        dump($jegyek);
-        
-        return view( 'studentPage.index', compact('jegyek'));
+        $marks = Mark::where('student_id', $id)->get();
+        $marks=$this->tantargyakHozzaAdasa($marks);
+        return view( 'studentPage.index', compact('marks'));
 
     }
 
@@ -78,5 +71,13 @@ class MarkController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function tantargyakHozzaAdasa($marks)
+    {
+        foreach ($marks as $mark){
+            $mark -> subject_id = Subject::find($mark->id);
+        }
+        return $marks;
     }
 }

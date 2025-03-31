@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-@extends ('layout')
-
-@section('content')
-
-
-=======
 @extends('layoutStudent')
 
 @section('content')
     <div class="student-name">
-        <h1>{{$marks->name}}</h1>
+
     </div>
     <ul>
         <li class="studentTableHead">
@@ -17,13 +10,12 @@
             <div class="2"><p>Tanár</p></div>
             <div class="3"><p>Osztályzat</p></div>
         </li>
-        @foreach($marks->mark)
+        @foreach($marks as $mark)
         <li>
-            <div class="1"><p>{{$mark->teacher}}</p></div>
-            <div class="2"><p>{{$mark->subject}}</p></div>
+            <div class="1"><p>{{$mark->given_at}}</p></div>
+            <div class="2"><p>{{$mark->subject_id}}</p></div>
             <div class="3"><p>{{$mark->mark}}</p></div>
         </li>
         @endforeach
     </ul>
->>>>>>> 076f9cdadf85ec292cf5005989ab042855ba8031
 @endsection

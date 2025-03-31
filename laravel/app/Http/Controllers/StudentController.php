@@ -70,7 +70,7 @@ class StudentController extends Controller
         $student_code = request('code');
         foreach ($students as $student) {
             if ($student->name == $name && $student->student_code == $student_code) {
-                return route('student.marks', compact( 'student'));
+                return redirect()->route('student.marks')->with('student', $student->toArray());
             }
         }
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
