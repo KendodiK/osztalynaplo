@@ -37,7 +37,8 @@ class MarkController extends Controller
      */
     public function show(array $student)    
     {
-        $id = $student->id; // nem jó hogy szopjál le
+        $id = $student; 
+        dump($id);
         $marks = Mark::all();
         $jegyek = [];
         foreach ($marks as $mark) {
@@ -50,6 +51,7 @@ class MarkController extends Controller
             };
         }
         dump($jegyek);
+        
         return view( 'studentPage.index', compact('jegyek'));
 
     }

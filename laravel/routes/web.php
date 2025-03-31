@@ -10,13 +10,8 @@ Route::get('/', function () { return view('home'); })->name('home');
 
 Route::get('/login/student', function () {return view('studentPage.login');})->name('loginStudent');
 Route::get('/login/teacher', function () {return view('teacherPage.login');})->name('loginTeacher');
-<<<<<<< HEAD
-Route::get('/student/login', [StudentController::class, 'login'])->name('student.login');
-Route::get('/teacher/login', [TeacherController::class, 'login'])->name('teacher.login');   
-=======
 Route::post('/student/login', [StudentController::class, 'login'])->name('student.login');
 Route::post('/teacher/login', [TeacherController::class, 'login'])->name('teacher.login');
->>>>>>> 076f9cdadf85ec292cf5005989ab042855ba8031
 
 Route::get('/login/student/marks', [MarkController::class, 'show'])->name('student.marks');    
 Route::get('group/subjects', [GroupController::class, 'getSubjects'])->name('group.subjects');
