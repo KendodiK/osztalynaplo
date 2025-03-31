@@ -67,10 +67,9 @@ class StudentController extends Controller
     {
         $students = Student::all();
         $name = request('name');
-        $class = request('class');
-        $student_code = request('student_code');
+        $student_code = request('code');
         foreach ($students as $student) {
-            if ($student->name == $name && $student->class == $class && $student->student_code == $student_code) {
+            if ($student->name == $name && $student->student_code == $student_code) {
                 return view('studentPage.index', compact('student'));
             }
         }
