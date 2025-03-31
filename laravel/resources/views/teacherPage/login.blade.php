@@ -5,12 +5,10 @@
 @enderror
 
 @section('content')
-    <div class="login">
-        <form action="{{route('teacher.login')}}" method="get">
+        <form action="{{route('teacher.login')}}" method="post">
             @csrf
-            <input type="text" name="name" placeholder="Név">
-            <input type="text" name="code" placeholder="Belépő kód">
-            <button type="submit">Belépés</button>
+            <input class="login-element" type="text" name="name" placeholder="Név">
+            <input class="login-element" type="text" name="code" placeholder="Belépő kód">
+            <button class="login" type="submit">Belépés</button>
         </form>
-    </div>
 @endsection

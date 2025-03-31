@@ -17,6 +17,7 @@ return new class extends Migration
             $table->char('gender');
             $table->unsignedBigInteger('group_id');
             $table->foreign('group_id')->references('id')->on('groups');
+            $table->unsignedBigInteger('student_code');
         });
     }
 

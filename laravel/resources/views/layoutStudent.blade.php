@@ -18,14 +18,17 @@
     <div class="menu">
         <nav>
             <ul class="menuUL">
-                <li></li>
+                <li><a href="{{route('student.marks')}}"></a></li>
+                <li><a href="{{route('student.groupMarks')}}"></a></li>
                 <li><a href="{{ route('home') }}">Kilépés</a></li>
             </ul>
         </nav>
     </div>
 </header>
 <main>
-    @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
 </main>
 </body>
 </html>
