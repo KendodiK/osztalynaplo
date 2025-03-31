@@ -1,240 +1,240 @@
-1;Kovács Bence;f;3
-2;Szabó Anna;n;7
-3;Nagy Gergő;f;2
-4;Tóth Réka;n;5
-5;Varga Máté;f;8
-6;Horváth Zsófia;n;1
-7;Kiss Dániel;f;6
-8;Molnár Laura;n;4
-9;Farkas Péter;f;3
-10;Balogh Éva;n;2
-11;Papp Zoltán;f;7
-12;Juhász Katalin;n;8
-13;Sipos Ádám;f;1
-14;Németh Orsolya;n;5
-15;Simon László;f;4
-16;Fodor Tímea;n;6
-17;Lakatos Bence;f;2
-18;Gál Anna;n;3
-19;Szilágyi Dániel;f;8
-20;Bognár Réka;n;1
-21;Barta Máté;f;7
-22;Boros Zsófia;n;5
-23;Katona Gergő;f;6
-24;Hajdu Laura;n;2
-25;Vass Péter;f;3
-26;Takács Éva;n;4
-27;Szűcs Zoltán;f;1
-28;Dudás Katalin;n;8
-29;Bodnár Ádám;f;7
-30;Halász Orsolya;n;5
-31;Bányai László;f;6
-32;Veres Tímea;n;3
-33;Pásztor Bence;f;2
-34;Lantos Anna;n;4
-35;Csordás Dániel;f;1
-36;Dénes Réka;n;8
-37;Zsigmond Máté;f;5
-38;Szarka Zsófia;n;7
-39;Csányi Gergő;f;6
-40;Gombos Laura;n;2
-41;Kovács Bence Péter;f;3
-42;Szabó Anna Réka;n;7
-43;Nagy Gergő Máté;f;2
-44;Tóth Réka Zsófia;n;5
-45;Varga Máté Dániel;f;8
-46;Horváth Zsófia Laura;n;1
-47;Kiss Dániel Ádám;f;6
-48;Molnár Laura Katalin;n;4
-49;Farkas Péter Zoltán;f;3
-50;Balogh Éva Orsolya;n;2
-51;Papp Zoltán László;f;7
-52;Juhász Katalin Tímea;n;8
-53;Sipos Ádám Gergő;f;1
-54;Németh Orsolya Réka;n;5
-55;Simon László Bence;f;4
-56;Fodor Tímea Anna;n;6
-57;Lakatos Bence Dániel;f;2
-58;Gál Anna Zsófia;n;3
-59;Szilágyi Dániel Péter;f;8
-60;Bognár Réka Katalin;n;1
-61;Barta Máté Zoltán;f;7
-62;Boros Zsófia Éva;n;5
-63;Katona Gergő Ádám;f;6
-64;Hajdu Laura Orsolya;n;2
-65;Vass Péter Bence;f;3
-66;Takács Éva Anna;n;4
-67;Szűcs Zoltán Gergő;f;1
-68;Dudás Katalin Laura;n;8
-69;Bodnár Ádám Dániel;f;7
-70;Halász Orsolya Tímea;n;5
-71;Bányai László Péter;f;6
-72;Veres Tímea Réka;n;3
-73;Pásztor Bence Gergő;f;2
-74;Lantos Anna Katalin;n;4
-75;Csordás Dániel Zoltán;f;1
-76;Dénes Réka Laura;n;8
-77;Zsigmond Máté Bence;f;5
-78;Szarka Zsófia Éva;n;7
-79;Csányi Gergő László;f;6
-80;Gombos Laura Tímea;n;2
-81;Fekete László;f;3
-82;Vörös Katalin;n;7
-83;Török Gergely Máté;f;2
-84;Pál Zsuzsanna;n;5
-85;Szilágyi Balázs Dániel;f;8
-86;Pintér Veronika;n;1
-87;Oláh Krisztián;f;6
-88;Major Judit Katalin;n;4
-89;Tóth Norbert Zoltán;f;3
-90;Lengyel Henrietta;n;2
-91;Boros Tamás;f;7
-92;Szűcs Diána;n;8
-93;Kocsis Gábor László;f;1
-94;Fodor Lili Anna;n;5
-95;Kertész Attila;f;4
-96;Kovács Noémi Tímea;n;6
-97;Lukács András Bence;f;2
-98;Rácz Viktória;n;3
-99;Hegedűs Csaba Dániel;f;8
-100;Balog Vivien;n;1
-101;Vincze Márton;f;7
-102;Tamási Regina Laura;n;5
-103;Barna Erik Zoltán;f;6
-104;Mészáros Klaudia;n;2
-105;Dudás Roland Péter;f;3
-106;Papp Nikolett;n;4
-107;Szalai Richárd;f;1
-108;Fekete Emese Éva;n;8
-109;Jakab Kristóf Zsolt;f;7
-110;Bíró Szandra;n;5
-111;Kerekes Dominik;f;6
-112;Hegyi Borbála Katalin;n;3
-113;Molnár Zoltán;f;2
-114;Kis Brigitta;n;4
-115;Vass Barnabás Ádám;f;1
-116;Kerekes Dóra;n;8
-117;Lantos Viktor;f;5
-118;Márton Izabella;n;7
-119;Sipos István Miklós;f;6
-120;Holló Tamara Anikó;n;2
-121;Takács Bence;f;3
-122;Nagy Dóra; n;7
-123;Tóth Gergő László;f;2
-124;Kovács Zita Anett;n;5
-125;Pintér Máté;f;8
-126;Farkas Kitti Zsófia;n;1
-127;Kiss Ádám Gábor;f;6
-128;Molnár Vivien;n;4
-129;Varga Péter;f;3
-130;Sárközi Orsolya;n;2
-131;Horváth Levente Dániel;f;7
-132;Kerekes Lili;n;8
-133;Szűcs András Gergely;f;1
-134;Balogh Katalin Tímea;n;5
-135;Katona Krisztián Zoltán;f;4
-136;Juhász Nóra Anna;n;6
-137;Fülöp Márk Bence;f;2
-138;Vas Laura Noémi;n;3
-139;Oláh Tamás;f;8
-140;Gál Regina;n;1
-141;Szabó Roland Zoltán;f;7
-142;Bognár Tímea Ágnes;n;5
-143;Németh László;f;6
-144;Takács Eszter Viola;n;2
-145;Simon Erik Zsolt;f;3
-146;Török Bianka;n;4
-147;Bíró Richárd Gergő;f;1
-148;Farkas Bettina Orsolya;n;8
-149;Lakatos Gábor Zoltán;f;7
-150;Sipos Enikő;n;5
-151;Hegedűs Attila;f;6
-152;Szalai Vivien;n;3
-153;Papp Kristóf Máté;f;2
-154;Barna Anett Katalin;n;4
-155;Kiss Norbert;f;1
-156;Boros Fanni Laura;n;8
-157;Mészáros Csaba Dániel;f;5
-158;Jakab Brigitta;n;7
-159;Vincze Bálint;f;6
-160;Tamási Nikolett Zsófia;n;2
-161;Kovács Balázs;f;3
-162;Tóth Emese;n;7
-163;Szabó Ákos Gergő;f;2
-164;Varga Zsófia Katalin;n;5
-165;Pintér Dominik;f;8
-166;Farkas Lilla Anett;n;1
-167;Kiss Tamás László;f;6
-168;Molnár Petra; n;4
-169;Horváth Márton Zoltán;f;3
-170;Sárközi Anikó Noémi;n;2
-171;Takács Máté Bence;f;7
-172;Kerekes Dóra Lili;n;8
-173;Balogh Levente Ádám;f;1
-174;Katona Kitti Vivien;n;5
-175;Juhász Gábor Péter;f;4
-176;Fülöp Fanni;n;6
-177;Oláh Zoltán;f;2
-178;Vas Nikolett Tímea;n;3
-179;Németh Kristóf Roland;f;8
-180;Gál Klaudia Zsuzsanna;n;1
-181;Bognár Norbert;f;7
-182;Bíró Laura Regina;n;5
-183;Lakatos László Tamás;f;6
-184;Sipos Bianka Anett;n;2
-185;Hegedűs István Miklós;f;3
-186;Szalai Bettina Orsolya;n;4
-187;Papp Attila Gergő;f;1
-188;Barna Vivien Zsófia;n;8
-189;Vincze Bence Dániel;f;7
-190;Tamási Brigitta;n;5
-191;Jakab Richárd Zoltán;f;6
-192;Mészáros Eszter Katalin;n;3
-193;Kiss Ádám Levente;f;2
-194;Boros Lili Anna;n;4
-195;Török Márk Roland;f;1
-196;Farkas Noémi Viola;n;8
-197;Barta Kristóf Zsolt;f;5
-198;Halász Enikő Tímea;n;7
-199;Bányai Gábor Tamás;f;6
-200;Veres Dóra Bianka;n;2
-201;Kovács Gergő;f;3
-202;Tóth Eszter;n;7
-203;Szabó Levente Zoltán;f;2
-204;Varga Lilla Anikó;n;5
-205;Pintér Bence Tamás;f;8
-206;Farkas Noémi Judit;n;1
-207;Kiss Ádám Dániel;f;6
-208;Molnár Bianka Katalin;n;4
-209;Horváth Balázs Péter;f;3
-210;Sárközi Petra Nikolett;n;2
-211;Takács Tamás;f;7
-212;Kerekes Kitti Zsófia;n;8
-213;Balogh Márton Bence;f;1
-214;Katona Orsolya Lili;n;5
-215;Juhász Kristóf Gábor;f;4
-216;Fülöp Fanni Tímea;n;6
-217;Oláh Zoltán László;f;2
-218;Vas Dóra Anett;n;3
-219;Németh Gergely Norbert;f;8
-220;Gál Regina Brigitta;n;1
-221;Bognár László Tamás;f;7
-222;Bíró Klaudia Judit;n;5
-223;Lakatos András Máté;f;6
-224;Sipos Bianka Zsuzsanna;n;2
-225;Hegedűs István Gábor;f;3
-226;Szalai Bettina Lili;n;4
-227;Papp Attila Roland;f;1
-228;Barna Vivien Katalin;n;8
-229;Vincze Bence Gergely;f;7
-230;Tamási Nikolett Anna;n;5
-231;Jakab Richárd Ádám;f;6
-232;Mészáros Eszter Orsolya;n;3
-233;Kiss Ádám Péter;f;2
-234;Boros Lili Viktória;n;4
-235;Török Márk Dániel;f;1
-236;Farkas Noémi Viola;n;8
-237;Barta Kristóf Zsolt;f;5
-238;Halász Enikő Tímea;n;7
-239;Bányai Gábor Norbert;f;6
-240;Veres Dóra Bianka;n;2 
+1;Kovács Bence;f;3;537481
+2;Szabó Anna;n;7;766336
+3;Nagy Gergő;f;2;686028
+4;Tóth Réka;n;5;228240
+5;Varga Máté;f;8;745491
+6;Horváth Zsófia;n;1;446201
+7;Kiss Dániel;f;6;718197
+8;Molnár Laura;n;4;244446
+9;Farkas Péter;f;3;135036
+10;Balogh Éva;n;2;390905
+11;Papp Zoltán;f;7;584402
+12;Juhász Katalin;n;8;647928
+13;Sipos Ádám;f;1;234344
+14;Németh Orsolya;n;5;318385
+15;Simon László;f;4;498229
+16;Fodor Tímea;n;6;414358
+17;Lakatos Bence;f;2;757554
+18;Gál Anna;n;3;804467
+19;Szilágyi Dániel;f;8;391932
+20;Bognár Réka;n;1;740046
+21;Barta Máté;f;7;100708
+22;Boros Zsófia;n;5;296804
+23;Katona Gergő;f;6;938537
+24;Hajdu Laura;n;2;941135
+25;Vass Péter;f;3;998072
+26;Takács Éva;n;4;244381
+27;Szűcs Zoltán;f;1;992895
+28;Dudás Katalin;n;8;899364
+29;Bodnár Ádám;f;7;589421
+30;Halász Orsolya;n;5;846687
+31;Bányai László;f;6;680938
+32;Veres Tímea;n;3;613165
+33;Pásztor Bence;f;2;530142
+34;Lantos Anna;n;4;763693
+35;Csordás Dániel;f;1;361533
+36;Dénes Réka;n;8;144098
+37;Zsigmond Máté;f;5;484846
+38;Szarka Zsófia;n;7;223280
+39;Csányi Gergő;f;6;137469
+40;Gombos Laura;n;2;661263
+41;Kovács Bence Péter;f;3;758345
+42;Szabó Anna Réka;n;7;165295
+43;Nagy Gergő Máté;f;2;597973
+44;Tóth Réka Zsófia;n;5;594035
+45;Varga Máté Dániel;f;8;471922
+46;Horváth Zsófia Laura;n;1;800576
+47;Kiss Dániel Ádám;f;6;552692
+48;Molnár Laura Katalin;n;4;524803
+49;Farkas Péter Zoltán;f;3;294828
+50;Balogh Éva Orsolya;n;2;638254
+51;Papp Zoltán László;f;7;285759
+52;Juhász Katalin Tímea;n;8;986429
+53;Sipos Ádám Gergő;f;1;204041
+54;Németh Orsolya Réka;n;5;609245
+55;Simon László Bence;f;4;904056
+56;Fodor Tímea Anna;n;6;340677
+57;Lakatos Bence Dániel;f;2;827797
+58;Gál Anna Zsófia;n;3;744892
+59;Szilágyi Dániel Péter;f;8;230166
+60;Bognár Réka Katalin;n;1;601109
+61;Barta Máté Zoltán;f;7;453305
+62;Boros Zsófia Éva;n;5;818831
+63;Katona Gergő Ádám;f;6;655023
+64;Hajdu Laura Orsolya;n;2;288347
+65;Vass Péter Bence;f;3;709966
+66;Takács Éva Anna;n;4;971236
+67;Szűcs Zoltán Gergő;f;1;217785
+68;Dudás Katalin Laura;n;8;470650
+69;Bodnár Ádám Dániel;f;7;956851
+70;Halász Orsolya Tímea;n;5;454130
+71;Bányai László Péter;f;6;929510
+72;Veres Tímea Réka;n;3;634274
+73;Pásztor Bence Gergő;f;2;766997
+74;Lantos Anna Katalin;n;4;730668
+75;Csordás Dániel Zoltán;f;1;981700
+76;Dénes Réka Laura;n;8;935411
+77;Zsigmond Máté Bence;f;5;698829
+78;Szarka Zsófia Éva;n;7;444501
+79;Csányi Gergő László;f;6;569212
+80;Gombos Laura Tímea;n;2;297495
+81;Fekete László;f;3;691688
+82;Vörös Katalin;n;7;568092
+83;Török Gergely Máté;f;2;704536
+84;Pál Zsuzsanna;n;5;951166
+85;Szilágyi Balázs Dániel;f;8;660927
+86;Pintér Veronika;n;1;694507
+87;Oláh Krisztián;f;6;509123
+88;Major Judit Katalin;n;4;920896
+89;Tóth Norbert Zoltán;f;3;859635
+90;Lengyel Henrietta;n;2;120855
+91;Boros Tamás;f;7;316300
+92;Szűcs Diána;n;8;739953
+93;Kocsis Gábor László;f;1;993112
+94;Fodor Lili Anna;n;5;536359
+95;Kertész Attila;f;4;307957
+96;Kovács Noémi Tímea;n;6;939513
+97;Lukács András Bence;f;2;510271
+98;Rácz Viktória;n;3;409626
+99;Hegedűs Csaba Dániel;f;8;884068
+100;Balog Vivien;n;1;500685
+101;Vincze Márton;f;7;682790
+102;Tamási Regina Laura;n;5;182042
+103;Barna Erik Zoltán;f;6;567950
+104;Mészáros Klaudia;n;2;840697
+105;Dudás Roland Péter;f;3;708742
+106;Papp Nikolett;n;4;651484
+107;Szalai Richárd;f;1;319431
+108;Fekete Emese Éva;n;8;473371
+109;Jakab Kristóf Zsolt;f;7;627543
+110;Bíró Szandra;n;5;968644
+111;Kerekes Dominik;f;6;641847
+112;Hegyi Borbála Katalin;n;3;483296
+113;Molnár Zoltán;f;2;275679
+114;Kis Brigitta;n;4;932670
+115;Vass Barnabás Ádám;f;1;909420
+116;Kerekes Dóra;n;8;885211
+117;Lantos Viktor;f;5;214295
+118;Márton Izabella;n;7;703855
+119;Sipos István Miklós;f;6;627419
+120;Holló Tamara Anikó;n;2;115458
+121;Takács Bence;f;3;562112
+122;Nagy Dóra; n;7;296887
+123;Tóth Gergő László;f;2;611013
+124;Kovács Zita Anett;n;5;935995
+125;Pintér Máté;f;8;237829
+126;Farkas Kitti Zsófia;n;1;289556
+127;Kiss Ádám Gábor;f;6;641160
+128;Molnár Vivien;n;4;330638
+129;Varga Péter;f;3;522710
+130;Sárközi Orsolya;n;2;142186
+131;Horváth Levente Dániel;f;7;525139
+132;Kerekes Lili;n;8;389202
+133;Szűcs András Gergely;f;1;560431
+134;Balogh Katalin Tímea;n;5;168527
+135;Katona Krisztián Zoltán;f;4;614703
+136;Juhász Nóra Anna;n;6;609646
+137;Fülöp Márk Bence;f;2;100141
+138;Vas Laura Noémi;n;3;863837
+139;Oláh Tamás;f;8;342424
+140;Gál Regina;n;1;109442
+141;Szabó Roland Zoltán;f;7;475076
+142;Bognár Tímea Ágnes;n;5;135751
+143;Németh László;f;6;393352
+144;Takács Eszter Viola;n;2;890990
+145;Simon Erik Zsolt;f;3;479006
+146;Török Bianka;n;4;833002
+147;Bíró Richárd Gergő;f;1;564274
+148;Farkas Bettina Orsolya;n;8;160442
+149;Lakatos Gábor Zoltán;f;7;626938
+150;Sipos Enikő;n;5;422745
+151;Hegedűs Attila;f;6;825217
+152;Szalai Vivien;n;3;806415
+153;Papp Kristóf Máté;f;2;782205
+154;Barna Anett Katalin;n;4;868610
+155;Kiss Norbert;f;1;938571
+156;Boros Fanni Laura;n;8;485903
+157;Mészáros Csaba Dániel;f;5;571027
+158;Jakab Brigitta;n;7;631954
+159;Vincze Bálint;f;6;702867
+160;Tamási Nikolett Zsófia;n;2;519185
+161;Kovács Balázs;f;3;110323
+162;Tóth Emese;n;7;988791
+163;Szabó Ákos Gergő;f;2;950660
+164;Varga Zsófia Katalin;n;5;585357
+165;Pintér Dominik;f;8;543504
+166;Farkas Lilla Anett;n;1;352645
+167;Kiss Tamás László;f;6;922863
+168;Molnár Petra; n;4;207152
+169;Horváth Márton Zoltán;f;3;417966
+170;Sárközi Anikó Noémi;n;2;399773
+171;Takács Máté Bence;f;7;885069
+172;Kerekes Dóra Lili;n;8;350456
+173;Balogh Levente Ádám;f;1;461431
+174;Katona Kitti Vivien;n;5;617977
+175;Juhász Gábor Péter;f;4;640381
+176;Fülöp Fanni;n;6;526361
+177;Oláh Zoltán;f;2;903534
+178;Vas Nikolett Tímea;n;3;720022
+179;Németh Kristóf Roland;f;8;556988
+180;Gál Klaudia Zsuzsanna;n;1;404825
+181;Bognár Norbert;f;7;725281
+182;Bíró Laura Regina;n;5;580718
+183;Lakatos László Tamás;f;6;703699
+184;Sipos Bianka Anett;n;2;199965
+185;Hegedűs István Miklós;f;3;316967
+186;Szalai Bettina Orsolya;n;4;718723
+187;Papp Attila Gergő;f;1;606996
+188;Barna Vivien Zsófia;n;8;691820
+189;Vincze Bence Dániel;f;7;229954
+190;Tamási Brigitta;n;5;228800
+191;Jakab Richárd Zoltán;f;6;138618
+192;Mészáros Eszter Katalin;n;3;468186
+193;Kiss Ádám Levente;f;2;260970
+194;Boros Lili Anna;n;4;823237
+195;Török Márk Roland;f;1;999117
+196;Farkas Noémi Viola;n;8;486283
+197;Barta Kristóf Zsolt;f;5;185090
+198;Halász Enikő Tímea;n;7;807994
+199;Bányai Gábor Tamás;f;6;447485
+200;Veres Dóra Bianka;n;2;226361
+201;Kovács Gergő;f;3;910138
+202;Tóth Eszter;n;7;457122
+203;Szabó Levente Zoltán;f;2;742475
+204;Varga Lilla Anikó;n;5;327164
+205;Pintér Bence Tamás;f;8;537674
+206;Farkas Noémi Judit;n;1;574761
+207;Kiss Ádám Dániel;f;6;444983
+208;Molnár Bianka Katalin;n;4;264228
+209;Horváth Balázs Péter;f;3;328229
+210;Sárközi Petra Nikolett;n;2;512210
+211;Takács Tamás;f;7;582368
+212;Kerekes Kitti Zsófia;n;8;851003
+213;Balogh Márton Bence;f;1;174965
+214;Katona Orsolya Lili;n;5;398041
+215;Juhász Kristóf Gábor;f;4;793903
+216;Fülöp Fanni Tímea;n;6;529604
+217;Oláh Zoltán László;f;2;385092
+218;Vas Dóra Anett;n;3;850694
+219;Németh Gergely Norbert;f;8;368389
+220;Gál Regina Brigitta;n;1;824779
+221;Bognár László Tamás;f;7;745647
+222;Bíró Klaudia Judit;n;5;331043
+223;Lakatos András Máté;f;6;977196
+224;Sipos Bianka Zsuzsanna;n;2;289165
+225;Hegedűs István Gábor;f;3;361155
+226;Szalai Bettina Lili;n;4;516883
+227;Papp Attila Roland;f;1;189486
+228;Barna Vivien Katalin;n;8;638193
+229;Vincze Bence Gergely;f;7;618858
+230;Tamási Nikolett Anna;n;5;254097
+231;Jakab Richárd Ádám;f;6;441270
+232;Mészáros Eszter Orsolya;n;3;195539
+233;Kiss Ádám Péter;f;2;372536
+234;Boros Lili Viktória;n;4;430627
+235;Török Márk Dániel;f;1;494686
+236;Farkas Noémi Viola;n;8;368159
+237;Barta Kristóf Zsolt;f;5;838242
+238;Halász Enikő Tímea;n;7;476535
+239;Bányai Gábor Norbert;f;6;662290
+240;Veres Dóra Bianka;n;2;742205
