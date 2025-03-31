@@ -12,7 +12,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -69,13 +69,8 @@ class StudentController extends Controller
         $name = request('name');
         $student_code = request('code');
         foreach ($students as $student) {
-<<<<<<< HEAD
-            if ($student->name == $name && $student->class == $class) {
-                return route('student.marks', compact( 'student'));
-=======
             if ($student->name == $name && $student->student_code == $student_code) {
-                return view('studentPage.index', compact('student'));
->>>>>>> 076f9cdadf85ec292cf5005989ab042855ba8031
+                return route('student.marks', compact( 'student'));
             }
         }
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
