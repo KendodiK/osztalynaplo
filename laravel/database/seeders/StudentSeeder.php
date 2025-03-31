@@ -27,6 +27,7 @@ class StudentSeeder extends Seeder
                 'name' => $data[1] ?? null,  
                 'gender' => $data[2] ?? null,
                 'group_id' => $data[3] ?? null,
+                'student_code' => $data[4] ?? null,
             ];  
         }
 
@@ -40,6 +41,7 @@ class StudentSeeder extends Seeder
             $student->name = $stud['name'];
             $student->gender = $stud['gender'];
             $student->group_id = $stud['group_id'];
+            $student->student_code = $stud['student_code'];
             $student->save();
         }
     }
