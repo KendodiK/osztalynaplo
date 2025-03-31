@@ -24,10 +24,11 @@
             </ul>
         </nav>
     </div>
-    @yield('content')
 </header>
 <main>
-    @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
 </main>
 </body>
 </html>
