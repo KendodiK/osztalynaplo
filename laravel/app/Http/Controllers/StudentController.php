@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
 {
@@ -70,7 +71,8 @@ class StudentController extends Controller
         $student_code = request('code');
         foreach ($students as $student) {
             if ($student->name == $name && $student->student_code == $student_code) {
-                return redirect()->route('student.marks')->with('student', $student->toArray());
+                Session::put('student', $student->toArray());
+                return redirect()->route('student.marks');
             }
         }
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
