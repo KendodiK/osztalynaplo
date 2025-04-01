@@ -12,8 +12,8 @@ class Subject extends Model
 
 
 
-    function mark()
+    function marks()
     {
-        return $this->belongsTo(Mark::class);
+        return $this->hasMany(Mark::class);
     }
 }

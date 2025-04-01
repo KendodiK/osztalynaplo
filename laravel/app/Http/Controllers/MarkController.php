@@ -39,12 +39,10 @@ class MarkController extends Controller
      */
     public function show()
     {
-        $student = session('student');
-        if ($student) {
-            $id =  $student['id'];
-        }
-        $marks = Mark::where('student_id', $id)->get();
-        $marks=$this->tantargyakHozzaAdasa($marks);
+        $tmpstudent = session('student');
+        $student = Student::find($tmpstudent['id']);
+        $marks = $student->marks;
+        //$marks=$this->tantargyakHozzaAdasa($marks);
         return view( 'studentPage.index', compact('marks'));
 
     }
@@ -76,7 +74,9 @@ class MarkController extends Controller
     public function tantargyakHozzaAdasa($marks)
     {
         foreach ($marks as $mark){
-            $mark -> subject_id = Subject::find($mark->id);
+            $subject = Subject::find($mark->id);
+            $name = $subject->subject_name;
+            $mark->subject_name = $name;
         }
         return $marks;
     }
