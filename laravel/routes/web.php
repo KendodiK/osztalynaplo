@@ -14,8 +14,7 @@ Route::post('/student/login', [StudentController::class, 'login'])->name('studen
 Route::post('/teacher/login', [TeacherController::class, 'login'])->name('teacher.login');
 
 Route::get('/login/student/marks', [MarkController::class, 'show'])->name('student.marks');
-Route::get('group/subjects', [GroupController::class, 'getSubjects'])->name('group.subjects');
-Route::get('group/avg', [GroupController::class, 'avg'])->name('group.avg');
+Route::get('group/subjects', [MarkController::class, 'showGroupMarks'])->name('mark.subjects');
 
 Route::get('teacher/groups', [TeacherController::class, 'getGroups'])->name('teacher.groups');
 Route::get('group/groupMarks', [GroupController::class, 'getMarks'])->name('group.marks');

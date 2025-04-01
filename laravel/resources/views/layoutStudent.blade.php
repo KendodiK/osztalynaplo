@@ -20,6 +20,7 @@
             <ul>
                 <li><a href="{{ route('home') }}">Kilépés</a></li>
                 <li><a href="{{route('student.marks')}}">Jegyek listája</a></li>
+                <li><a href="{{route('mark.subjects')}}">Tantárgyak</a></li>
             </ul>
         </nav>
     </div>

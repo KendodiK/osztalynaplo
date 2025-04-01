@@ -6,6 +6,7 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Models\Mark;
 use App\Models\Subject;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\View;
 
 class MarkController extends Controller
@@ -39,8 +40,7 @@ class MarkController extends Controller
      */
     public function show()
     {
-        $tmpStudent = session('student');
-        $student = Student::find($tmpStudent['id']);
+        $student = $this->getStudent();
         $marks = $student->marks;
         return view( 'studentPage.index', compact('marks', 'student'));
 
@@ -78,5 +78,17 @@ class MarkController extends Controller
             $mark->subject_name = $name;
         }
         return $marks;
+    }
+
+    public  function  getStudent()
+    {
+        $tmpStudent = Session::get('student');
+        return Student::find($tmpStudent['id']);
+    }
+
+    public function showGroupMarks()
+    {
+        $student = $this->getStudent();
+        return view('studentPage.subjectMark', compact('student'));
     }
 }
