@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Group;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class SubjectController extends Controller
@@ -35,7 +37,10 @@ class SubjectController extends Controller
      */
     public function show(string $id)
     {
-        
+        $tmpStudent = session('student');
+        $student = Student::find($tmpStudent['id']);
+        $group = Group::find($student['group_id']);
+
     }
 
     /**

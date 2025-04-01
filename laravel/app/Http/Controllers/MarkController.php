@@ -43,10 +43,13 @@ class MarkController extends Controller
         if ($student) {
             $id =  $student['id'];
         }
-        $marks = Mark::where('student_id', $id)->get();
-        $marks=$this->tantargyakHozzaAdasa($marks);
-        return view( 'studentPage.index', compact('marks'));
 
+        $marks = Mark::where('student_id', $id)->get();
+        foreach ($marks as $mark) {
+            $mark=$this->tantargyakHozzaAdasa($mark);
+            return view( 'studentPage.index', compact('mark'));
+
+        }
     }
 
     /**
@@ -73,11 +76,9 @@ class MarkController extends Controller
         //
     }
 
-    public function tantargyakHozzaAdasa($marks)
+    public function tantargyakHozzaAdasa($mark)
     {
-        foreach ($marks as $mark){
-            $mark -> subject_id = Subject::find($mark->id);
-        }
-        return $marks;
+        $mark -> subject_id = Subject::find($mark->id)->subject_name ?? null;
+        return $mark;
     }
 }
