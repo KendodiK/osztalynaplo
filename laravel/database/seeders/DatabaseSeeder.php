@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             TeacherSeeder::class,
             StudentSeeder::class,
             MarkSeeder::class,
+            ConnectGroupSubjectSeeder::class,
+            ConnectSubjectTeacherGroupSeeder::class,
         ]);
         
     }
