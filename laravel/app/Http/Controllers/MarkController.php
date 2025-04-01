@@ -39,11 +39,10 @@ class MarkController extends Controller
      */
     public function show()
     {
-        $tmpstudent = session('student');
-        $student = Student::find($tmpstudent['id']);
+        $tmpStudent = session('student');
+        $student = Student::find($tmpStudent['id']);
         $marks = $student->marks;
-        //$marks=$this->tantargyakHozzaAdasa($marks);
-        return view( 'studentPage.index', compact('marks'));
+        return view( 'studentPage.index', compact('marks', 'student'));
 
     }
 
