@@ -35,7 +35,7 @@ class SubjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
         $tmpStudent = session('student');
         $student = Student::find($tmpStudent['id']);
