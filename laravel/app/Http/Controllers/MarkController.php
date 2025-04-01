@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Models\Mark;
+use App\Models\Subject;
 use Illuminate\Support\Facades\View;
 
 class MarkController extends Controller
@@ -43,6 +44,7 @@ class MarkController extends Controller
             $id =  $student['id'];
         }
         $marks = Mark::where('student_id', $id)->get();
+        $marks=$this->tantargyakHozzaAdasa($marks);
         return view( 'studentPage.index', compact('marks'));
 
     }
@@ -69,5 +71,13 @@ class MarkController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function tantargyakHozzaAdasa($marks)
+    {
+        foreach ($marks as $mark){
+            $mark -> subject_id = Subject::find($mark->id);
+        }
+        return $marks;
     }
 }
