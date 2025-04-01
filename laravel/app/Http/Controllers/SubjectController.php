@@ -35,11 +35,28 @@ class SubjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
         $tmpStudent = session('student');
         $student = Student::find($tmpStudent['id']);
         $group = Group::find($student['group_id']);
+
+        $subjectsForGroups = ConnectSubjectGroupController::find($group)->ConnectSubjectGroupController::all();
+
+        $marksForStudent = Mark::find($student);
+        $jegyek=[];
+        
+        foreach ($subjectsForGroups as $subjectForGroup) {
+            $subjectName = Subject::find($subjectForGroup['subject_id'])->name;
+            foreach ($marksForStudent as $markForStudent) {
+                if ($subjectForGroup['subject_id'] == $markForStudent['subject_id']) {
+                    $jegyek[] =[
+                        "subject" => $subjectName,
+                        "mark" => $markForStudent['mark']
+                    ];
+                }
+            }
+        }
 
     }
 
@@ -65,5 +82,10 @@ class SubjectController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function SUM($grade)
+    {
+
     }
 }
