@@ -9,7 +9,7 @@ class ConnectSubjectsGroup extends Model
 {
     use HasFactory;
 
-    public $timespace = false;
+    public $timestamps = false;
     
     protected $fillable = ['id', 'group_id', 'subject_id'];
 

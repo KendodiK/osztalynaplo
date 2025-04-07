@@ -95,6 +95,10 @@ class MarkController extends Controller
     public function showGroupMarks()
     {
         $student = $this->getStudent();
-        return view('studentPage.subjectMark', compact('student'));
+        $AVG = Mark::AVGForSubjects($student->id);
+        $marks = Mark::marksForStud($student->id);
+        return view('studentPage.subjectMark', compact('student','AVG','marks'));
+
+
     }
 }
