@@ -52,10 +52,11 @@ class Mark extends Model
     {
         $studentId = $student_id; // Állítsd be a diák azonosítóját
 
-        $results = DB::table('marks')
-            ->selectRaw('mark')
-            ->where('student_id', $studentId)
-            ->get();
+        $results = Mark::select('marks.mark', 'subjects.subject_name', 'marks.given_at')
+        ->join('subjects', 'marks.subject_id', '=', 'subjects.id')
+        ->where('marks.student_id', $studentId)
+        ->orderBy('marks.given_at', 'desc')
+        ->get();
 
         return $results;
     }

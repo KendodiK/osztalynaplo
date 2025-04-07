@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Models\Mark;
 
 class StudentController extends Controller
 {
@@ -72,7 +73,8 @@ class StudentController extends Controller
         foreach ($students as $student) {
             if ($student->name == $name && $student->student_code == $student_code) {
                 Session::put('student', $student->toArray());
-                return redirect()->route('student.marks');
+                //$marks = Mark::marksForStud($student->id);
+            return redirect()->route('student.marks'/*,compact('student','marks')*/);
             }
         }
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
