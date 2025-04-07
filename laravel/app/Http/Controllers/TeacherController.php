@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Group;
 use App\Models\teacher;
 use Illuminate\Http\Request;
 
@@ -70,7 +71,8 @@ class TeacherController extends Controller
         $code = request('code');
         foreach ($teachers as $teacher) {
             if ($teacher->name == $name && $teacher->identification_code == $code) {
-                return view('teacherPage.index', compact('teacher'));
+                $connections = ConnectSubjectsGroupTeacherConroller::getByTeacher($teacher->id);
+                return view('teacherPage.index', compact('connections'));
             }
         }
         return view('teacherPage.login')->with('errors', 'Nincs a megadottaknak megfelelő tanár');

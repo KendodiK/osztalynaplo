@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ConnectSubjectsGroupTeacher;
 use Illuminate\Http\Request;
 
-class ConnectSubjectTeacherController extends Controller
+class ConnectSubjectsGroupTeacherConroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -60,5 +61,11 @@ class ConnectSubjectTeacherController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public static function getByTeacher(string $id)
+    {
+        $connections = ConnectSubjectsGroupTeacher::where('teacher_id', '=', $id)->get();
+        return $connections;
     }
 }

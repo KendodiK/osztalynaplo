@@ -1,9 +1,5 @@
 @extends('layout')
 
-@error('name')
-<div class=" alert alert-warning">{{$message}}</div>
-@enderror
-
 @section('content')
         <form action="{{route('teacher.login')}}" method="post">
             @csrf
