@@ -1,33 +1,42 @@
-$('#groupBtn').click(function () {
-    var id = $(this).val();
+$(document).ready(function () {
+    $('#groupBtn').on('click', function () {
+        var id = $(this).val();
 
-    $.ajax({
-        url: '/groups/' + id + "/all",
-        type: 'get',
-        dataType: 'json',
-        success: function (response) {
-            var len = 0;
-            $('teacherContent').clear;
+        $.ajax({
+            url: '/groups/' + id + "/all",
+            type: 'get',
+            dataType: 'json',
+            success: function (response) {
+                var len = 0;
+                if (response != null) {
+                    len = response.length;
+                }
 
-            if(response != null){
-                len = response['data'].length;
-                $('teacherContent').append(
-                    "<ul>" +
-                    "<li>" +
-                    "<div>Név</div>" +
-                    "<div>Szept.</div>" +
-                    "<div>Okt.</div>" +
-                    "<div>Nov.</div>" +
-                    "<div>Dec.</div>" +
-                    "<div>Jan.</div>" +
-                    "<div>Febr.</div>" +
-                    "<div>Márc.</div>" +
-                    "<div>Ápr.</div>" +
-                    "<div>Máj.</div>" +
-                    "<div>Jun.</div>" +
-                    "</li>"
-                )
+                if(len > 0){
+                    var toHtml =
+                        "<ul>" +
+                        "<li>" +
+                        "<div>Név</div>" +
+                        "<div>Szept.</div>" +
+                        "<div>Okt.</div>" +
+                        "<div>Nov.</div>" +
+                        "<div>Dec.</div>" +
+                        "<div>Jan.</div>" +
+                        "<div>Febr.</div>" +
+                        "<div>Márc.</div>" +
+                        "<div>Ápr.</div>" +
+                        "<div>Máj.</div>" +
+                        "<div>Jun.</div>" +
+                        "</li>";
+
+                    for (var i = 0; i < len; i++){
+                        toHtml += "<li><div>" + response[i].name + "</div></li>"
+                    }
+
+                    toHtml += "</ul>"
+                    $('#teacherContent').html(toHtml);
+                }
             }
-        }
+        })
     })
 })
