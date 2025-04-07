@@ -11,7 +11,7 @@ class ConnectSubjectsGroupTeacher extends Model
     use HasFactory;
     public $timestamps = false;
 
-    protected $fillable = [ 'id', 'subject_id', 'teacher_id'];
+    protected $fillable = [ 'id', 'subject_id', 'teacher_id', 'group_id'];
 
     function teacher()
     {
@@ -20,5 +20,10 @@ class ConnectSubjectsGroupTeacher extends Model
 
     function subject(){
         return $this->belongsTo(Subject::class);
+    }
+
+    function group()
+    {
+        return $this->belongsTo(Group::class);
     }
 }
