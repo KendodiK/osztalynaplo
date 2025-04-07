@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mark;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -76,5 +77,12 @@ class StudentController extends Controller
             }
         }
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
+    }
+
+    public  function showAllStudentsByGroupId(string $group_id)
+    {
+        $students = Student::where('group_id', $group_id)->get();
+
+        return json_encode($students);
     }
 }

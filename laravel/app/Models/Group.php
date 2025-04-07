@@ -16,6 +16,11 @@ class Group extends Model
         return $this->hasMany(Student::class);
     }
 
+    function connectSubjectsGroupTeacher()
+    {
+        return $this->hasMany(ConnectSubjectsGroupTeacher::class);
+    }
+
     function teacher()
     {
         return $this->belongsTo(Teacher::class);

@@ -23,3 +23,5 @@ Route::post('marks/add', [MarkController::class, 'add'])->name('marks.add');
 Route::delete('marks/delete', [MarkController::class, 'delete'])->name('marks.delete');
 Route::put('groups/update', [GroupController::class, 'update'])->name('groups.update');
 //Route::post('student/add', [GroupController::class, 'add'])->name('student.add');
+
+Route::get('groups/{id}/all', [StudentController::class, 'showAllByGroupId'])->name('group.allStudents');
