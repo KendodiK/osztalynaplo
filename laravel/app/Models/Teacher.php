@@ -40,4 +40,25 @@ class Teacher extends EloquentModel
 
         return $marks;
     }
+
+    public static function ClassAVGForSubjects($group_id,$subject_name)
+    {
+        $groupId = $group_id;
+        $subjectName = $subject_name;
+
+        $classAverage = Mark::join('students', 'marks.student_id', '=', 'students.id')
+            ->join('subjects', 'marks.subject_id', '=', 'subjects.id')
+            ->whereIn('marks.student_id', function ($query) {
+                $query->select('id')
+                    ->from('students')
+                    ->where('group_id', $groupId);
+            })
+            ->whereIn('marks.subject_id', function ($query) {
+                $query->select('id')
+                    ->from('subjects')
+                    ->where('subject_name', $subjectName);
+            })
+            ->avg('marks.mark');
+    }
+
 }
