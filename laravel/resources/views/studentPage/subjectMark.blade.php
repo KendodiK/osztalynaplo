@@ -5,13 +5,21 @@
         <div class="name">{{$student->name}}</div>
         <div class="class">{{$student->group->number}}.{{$student->group->sign}}</div>
     </div>
-    <ul class="student-table">
-        @foreach($AVG as $mark)
-            <li class="row {{ $loop->iteration % 2 == 0 ? 'even' : 'odd' }}">
-                <div class="subject-name"></div>
-                <div class="avg"> </div>
-                <div class="marks"></div>
-            </li>
-        @endforeach
-    </ul>
+        <ul class="student-table">
+            @foreach($AVG as $average)
+                <li class="row {{ $loop->iteration % 2 == 0 ? 'even' : 'odd' }}">
+                    <div class="student-by-subj-table">
+                        <div class="top">{{$average->subject_name}}</div>
+                        <div class="top">Átlag: {{$average->average_mark}}</div>
+                        <div class="bottom">
+                            @foreach($marks as $mark)
+                                @if($mark->subject_name == $average->subject_name)
+                                    {{$mark->mark}}
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
 @endsection

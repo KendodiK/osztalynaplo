@@ -17,16 +17,12 @@
 <header>
     <div class="menu">
         <nav>
-            <ul>
-                <li><a href="{{ route('home') }}">Kilépés</a></li>
+                <a class="groupBtn" href="{{ route('home') }}">Kilépés</a>
                 @foreach($connections as $connection)
-                    <li>
                         <button class="groupBtn" type="button" id="groupBtn" value="{{$connection->group->id}}">
                             {{$connection->group->number}}.{{$connection->group->sign}}
                         </button>
-                    </li>
                 @endforeach
-            </ul>
         </nav>
     </div>
 </header>

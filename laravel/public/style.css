@@ -93,6 +93,22 @@ li {
     text-align: center;
     margin-left: 2%;
     margin-right: 2%;
+    padding-right: 1%;
+    padding-left: 1%;
+    width: auto;
+    height: 100%;
+}
+
+.groupBtn  {
+    background: rgb(43, 43, 43);
+    border: 1px solid red;
+    color: #9c9c9c;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1vw;
+    padding-right: 1%;
+    padding-left: 1%;
     width: 10%;
     height: 100%;
 }
@@ -119,7 +135,10 @@ li {
 
 .student-table {
     padding: 0;
-    margin: 0;
+    margin-top: 4vw;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .student-table div {
@@ -159,4 +178,28 @@ li {
     padding-top: 1%;
     background: rgb(133,14,14);
     background: linear-gradient(90deg, rgba(133,14,14,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.student-by-subj-table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid red;
+}
+
+.bottom {
+    width: 100%;
+    height: 4vw;
+    margin-top: 2%;
+    box-sizing: border-box;
 }
