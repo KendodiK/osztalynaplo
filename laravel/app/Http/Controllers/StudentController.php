@@ -6,7 +6,6 @@ use App\Models\Mark;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use App\Models\Mark;
 
 class StudentController extends Controller
 {

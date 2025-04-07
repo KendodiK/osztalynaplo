@@ -98,7 +98,5 @@ class MarkController extends Controller
         $AVG = Mark::AVGForSubjects($student->id);
         $marks = Mark::marksForStud($student->id);
         return view('studentPage.subjectMark', compact('student','AVG','marks'));
-
-
     }
 }
