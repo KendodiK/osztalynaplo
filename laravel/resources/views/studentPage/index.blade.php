@@ -14,7 +14,7 @@
         @foreach($marks as $mark)
         <li class="row {{ $loop->iteration % 2 == 0 ? 'even' : 'odd' }}">
             <div><p>{{$mark->given_at}}</p></div>
-            <div><p>{{$mark->subject->name}}</p></div>
+            <div><p>{{$mark->subject->subject_name}}</p></div>
             <div><p>{{$mark->mark}}</p></div>
         </li>
         @endforeach

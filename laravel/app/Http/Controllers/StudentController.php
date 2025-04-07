@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ConnectSubjectsGroupTeacher;
 use App\Models\Mark;
 use App\Models\Student;
 use Illuminate\Http\Request;
@@ -73,16 +74,29 @@ class StudentController extends Controller
         foreach ($students as $student) {
             if ($student->name == $name && $student->student_code == $student_code) {
                 Session::put('student', $student->toArray());
-                return redirect()->route('student.marks');
+                //$marks = Mark::marksForStud($student->id);
+            return redirect()->route('student.marks'/*,compact('student','marks')*/);
             }
         }
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
     }
 
-    public  function showAllStudentsByGroupId(string $group_id)
+    public  function showAllByGroupId(string $group_id)
     {
         $students = Student::where('group_id', $group_id)->get();
-
-        return json_encode($students);
+        $markAll = [];
+        $teacher = Session::get('teacher');
+        $subject = ConnectSubjectsGroupTeacher::where('teacher_id', '=', $teacher->id)->where('group_id', '=', $group_id)->get();
+        foreach ($students as $student) {
+            $marks = ["$student->id" => Mark::marksForStud($student->id)];
+            $markGood = [];
+            foreach ($marks as $mark) {
+                if ($subject->subject->subject_name == $mark->subject->subject_name) {
+                    $markGood += $mark;
+                }
+            }
+            $markAll[$student->id][] = $markGood;
+        }
+        return response()->json($students, $markAll);
     }
 }

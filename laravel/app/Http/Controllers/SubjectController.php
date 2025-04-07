@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Group;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use App\Models\Mark;
 
 class SubjectController extends Controller
 {
@@ -35,12 +36,12 @@ class SubjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
         $tmpStudent = session('student');
         $student = Student::find($tmpStudent['id']);
         $group = Group::find($student['group_id']);
-
+        $marks = Mark::AVGForSubjects($student->id);
     }
 
     /**
@@ -65,5 +66,10 @@ class SubjectController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function SUM($grade)
+    {
+
     }
 }

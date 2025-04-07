@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Group;
 use App\Models\teacher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class TeacherController extends Controller
 {
@@ -72,6 +73,7 @@ class TeacherController extends Controller
         foreach ($teachers as $teacher) {
             if ($teacher->name == $name && $teacher->identification_code == $code) {
                 $connections = ConnectSubjectsGroupTeacherConroller::getByTeacher($teacher->id);
+                Session::put('teacher', $teacher);
                 return view('teacherPage.index', compact('connections'));
             }
         }

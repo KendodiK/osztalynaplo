@@ -6,9 +6,8 @@
     <title>E-napló</title>
 
     <!-- Scripts -->
-    {{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js')}}"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome/css/all.css') }}" >
@@ -19,6 +18,7 @@
     <div class="menu">
         <nav>
             <ul>
+                <li><a href="{{ route('home') }}">Kilépés</a></li>
                 @foreach($connections as $connection)
                     <li>
                         <button class="groupBtn" type="button" id="groupBtn" value="{{$connection->group->id}}">
