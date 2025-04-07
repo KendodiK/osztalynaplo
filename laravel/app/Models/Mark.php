@@ -44,7 +44,16 @@ class Mark extends Model
 
     public function studentAVG($student_id)
     {
-        $query = "SELECT AVG(mark) FROM `marks` WHERE student_id = $student_id";
+        //$query = "SELECT AVG(mark) FROM `marks` WHERE student_id = $student_id";
+
+        $studentId = $student_id; // Állítsd be a diák azonosítóját
+
+        $results = DB::table('marks')
+            ->selectRaw('AVG(mark) as student_average')
+            ->where('student_id',$studentId)
+            ->get();
+
+        return $results;
 
     }
 
