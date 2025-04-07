@@ -6,7 +6,7 @@
         <div class="class">{{$student->group->number}}.{{$student->group->sign}}</div>
     </div>
     <ul class="student-table">
-        @foreach($subjectMarks as $mark)
+        @foreach($AVG as $mark)
             <li class="row {{ $loop->iteration % 2 == 0 ? 'even' : 'odd' }}">
                 <div class="subject-name"></div>
                 <div class="avg"> </div>

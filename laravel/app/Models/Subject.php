@@ -16,4 +16,9 @@ class Subject extends Model
     {
         return $this->hasMany(Mark::class);
     }
+
+    public function AVGForSubjects($student_id)
+    {
+        $query = "SELECT AVG(mark),subjects.subject_name FROM `marks` JOIN subjects ON marks.subject_id = subjects.id WHERE student_id = $student_id  GROUP BY subject_name";
+    }
 }

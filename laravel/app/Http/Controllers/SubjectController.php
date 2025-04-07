@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Group;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use App\Models\Mark;
 
 class SubjectController extends Controller
 {
@@ -41,22 +42,30 @@ class SubjectController extends Controller
         $student = Student::find($tmpStudent['id']);
         $group = Group::find($student['group_id']);
 
-        $subjectsForGroups = ConnectSubjectGroupController::find($group)->ConnectSubjectGroupController::all();
+       /* $subjectsForGroups = ConnectSubjectGroupController::find($group)->ConnectSubjectGroupController::all();
 
         $marksForStudent = Mark::find($student);
-        $jegyek=[];
+        $marks=[];
         
         foreach ($subjectsForGroups as $subjectForGroup) {
             $subjectName = Subject::find($subjectForGroup['subject_id'])->name;
             foreach ($marksForStudent as $markForStudent) {
                 if ($subjectForGroup['subject_id'] == $markForStudent['subject_id']) {
-                    $jegyek[] =[
+                    $marks[] =[
                         "subject" => $subjectName,
                         "mark" => $markForStudent['mark']
                     ];
+
                 }
             }
         }
+
+        $marksWSubjectsInGroup = ksort($jegyek);*/
+
+        $marks = Mark::AVGForSubjects($student->id);
+        
+
+
 
     }
 
