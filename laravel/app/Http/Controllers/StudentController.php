@@ -81,10 +81,14 @@ class StudentController extends Controller
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
     }
 
-    public  function showAllStudentsByGroupId(string $group_id)
+    public  function showAllByGroupId(string $group_id)
     {
         $students = Student::where('group_id', $group_id)->get();
-
-        return json_encode($students);
+        /*$markAll = [];
+        foreach ($students as $student) {
+            $marks = ["$student->id" => Mark::marksForStud($student->id)];
+            array_push($markAll, $marks);
+        }*/
+        return response()->json($students);
     }
 }
