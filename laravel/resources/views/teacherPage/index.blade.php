@@ -18,6 +18,7 @@
     <div class="menu">
         <nav>
             <ul>
+                <li><a href="{{ route('home') }}">Kilépés</a></li>
                 @foreach($connections as $connection)
                     <li>
                         <button class="groupBtn" type="button" id="groupBtn" value="{{$connection->group->id}}">

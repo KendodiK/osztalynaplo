@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ConnectSubjectsGroupTeacher;
 use App\Models\Mark;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use App\Models\Mark;
 
 class StudentController extends Controller
 {
@@ -84,11 +84,19 @@ class StudentController extends Controller
     public  function showAllByGroupId(string $group_id)
     {
         $students = Student::where('group_id', $group_id)->get();
-        /*$markAll = [];
+        $markAll = [];
+        $teacher = Session::get('teacher');
+        $subject = ConnectSubjectsGroupTeacher::where('teacher_id', '=', $teacher->id)->where('group_id', '=', $group_id)->get();
         foreach ($students as $student) {
             $marks = ["$student->id" => Mark::marksForStud($student->id)];
-            array_push($markAll, $marks);
-        }*/
-        return response()->json($students);
+            $markGood = [];
+            foreach ($marks as $mark) {
+                if ($subject->subject->subject_name == $mark->subject->subject_name) {
+                    $markGood += $mark;
+                }
+            }
+            $markAll[$student->id][] = $markGood;
+        }
+        return response()->json($students, $markAll);
     }
 }
