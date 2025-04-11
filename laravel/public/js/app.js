@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#groupBtn').on('click', function () {
+    $('button[name="groupBtn"]').on('click', function () {
         var groupId = $(this).val();
         var subjectId = $(this).attr('data-value');
 

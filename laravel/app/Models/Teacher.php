@@ -17,23 +17,23 @@ class Teacher extends EloquentModel
         return $this->hasMany(Group::class,'class_id');
     }
 
-    public static function marksForSubjectByTeacher($group_id,$subject_name)
+    public static function marksForSubjectByTeacher($group_id, $subject_id)
     {
         $groupId = $group_id;
-        $subjectName = $subject_name;
+        $subjectId = $subject_id;
 
-        $marks = Mark::select('students.name', 'students.group_id', 'subjects.subject_name', 'marks.mark', 'marks.given_at')
+        $marks = Mark::join('students', 'marks.student_id', '=', 'students.id')
             ->join('subjects', 'marks.subject_id', '=', 'subjects.id')
-            ->join('students', 'marks.student_id', '=', 'students.id')
-            ->whereIn('marks.student_id', function ($query) {
+            ->select('students.name', 'students.group_id', 'subjects.subject_name', 'marks.mark', 'marks.given_at')
+            ->whereIn('marks.student_id', function ($query) use ($groupId) {
                 $query->select('id')
                     ->from('students')
                     ->where('group_id', $groupId);
             })
-            ->whereIn('marks.subject_id', function ($query) use ($subjectName) {
+            ->whereIn('marks.subject_id', function ($query) use ($subjectId) {
                 $query->select('id')
                     ->from('subjects')
-                    ->where('subject_name', $subjectName);
+                    ->where('subject_id', $subjectId);
             })
             ->orderBy('marks.given_at')
             ->get();
@@ -61,7 +61,7 @@ class Teacher extends EloquentModel
             ->avg('marks.mark');
     }
 
-    
+
 
 
 
