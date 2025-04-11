@@ -20,7 +20,7 @@
                 <a class="groupBtn" href="{{ route('home') }}">Kilépés</a>
                 @foreach($connections as $connection)
                         <button class="groupBtn" type="button" id="groupBtn" value="{{$connection->group->id}}">
-                            {{$connection->group->number}}.{{$connection->group->sign}}
+                            {{$connection->group->number}}.{{$connection->group->sign}}: {{$connection->subject->subject_name}}
                         </button>
                 @endforeach
         </nav>
