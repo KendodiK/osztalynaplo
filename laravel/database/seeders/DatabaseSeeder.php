@@ -24,5 +24,5 @@ class DatabaseSeeder extends Seeder
             ConnectSubjectTeacherGroupSeeder::class,
         ]);
         
-    }
+    }   
 }
