@@ -69,4 +69,20 @@ class Mark extends Model
 
         return $results;
     }
+
+    public static function marksgive($marks){
+
+        $mark= new Mark();
+        $grade = $marks;
+        
+        $mark->given_at=date('Y-m-d');
+        $mark->student_id=request('student_id');
+        $mark->subject_id = request('subject_id');
+        $mark->mark->$grade;
+
+        $mark->save();
+        return  $mark; //ide nem mark kell hanem az a route amivel vissza tud tértni az oldalra,
+                       //  csak nem jöttem rá mekyik az és így legalább nem dob hibát xddd
+
+    }
 }

@@ -30,7 +30,7 @@ class Teacher extends EloquentModel
                     ->from('students')
                     ->where('group_id', $groupId);
             })
-            ->whereIn('marks.subject_id', function ($query) {
+            ->whereIn('marks.subject_id', function ($query) use ($subjectName) {
                 $query->select('id')
                     ->from('subjects')
                     ->where('subject_name', $subjectName);
@@ -48,17 +48,21 @@ class Teacher extends EloquentModel
 
         $classAverage = Mark::join('students', 'marks.student_id', '=', 'students.id')
             ->join('subjects', 'marks.subject_id', '=', 'subjects.id')
-            ->whereIn('marks.student_id', function ($query) {
+            ->whereIn('marks.student_id', function ($query) use ($groupId) {
                 $query->select('id')
                     ->from('students')
                     ->where('group_id', $groupId);
             })
-            ->whereIn('marks.subject_id', function ($query) {
+            ->whereIn('marks.subject_id', function ($query) use ($subjectName) {
                 $query->select('id')
                     ->from('subjects')
                     ->where('subject_name', $subjectName);
             })
             ->avg('marks.mark');
     }
+
+    
+
+
 
 }
