@@ -1,9 +1,10 @@
 $(document).ready(function () {
     $('#groupBtn').on('click', function () {
-        var id = $(this).val();
+        var groupId = $(this).val();
+        var subjectId = $(this).attr('data-value');
 
         $.ajax({
-            url: '/groups/' + id + "/all",
+            url: '/groups/' + groupId + "/" + subjectId + "/all",
             type: 'get',
             dataType: 'json',
             success: function (response) {

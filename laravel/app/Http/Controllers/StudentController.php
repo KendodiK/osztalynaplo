@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ConnectSubjectsGroupTeacher;
 use App\Models\Mark;
 use App\Models\Student;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -81,22 +82,24 @@ class StudentController extends Controller
         return view('studentPage.login')->with('errors', 'Nincs a megadottaknak megfelelő diák');
     }
 
-    public  function showAllByGroupId(string $group_id)
+    public  function showAllByGroupId($group_id, $subject_id)
     {
-        $students = Student::where('group_id', $group_id)->get();
+        /*$students = Student::where('group_id', $group_id)->get();
         $markAll = [];
         $teacher = Session::get('teacher');
-        $subject = ConnectSubjectsGroupTeacher::where('teacher_id', '=', $teacher->id)->where('group_id', '=', $group_id)->get();
+        $subjectFC = ConnectSubjectsGroupTeacher::where('teacher_id', '=', $teacher->id)->where('group_id', '=', $group_id)->get();
         foreach ($students as $student) {
             $marks = ["$student->id" => Mark::marksForStud($student->id)];
-            $markGood = [];
             foreach ($marks as $mark) {
+                $subjectN = $subjectFC->subject->subject_name;
+                $markN = $mark->subject->subject_name;
                 if ($subject->subject->subject_name == $mark->subject->subject_name) {
-                    $markGood += $mark;
+                    array_push($markAll, $mark);
                 }
             }
             $markAll[$student->id][] = $markGood;
-        }
-        return response()->json($students, $markAll);
+        }*/
+        $classData = Teacher::marksForSubjectByTeacher($group_id, $subject_id);
+        return response()->json($classData);
     }
 }
