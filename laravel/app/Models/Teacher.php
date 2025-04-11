@@ -22,9 +22,9 @@ class Teacher extends EloquentModel
         $groupId = $group_id;
         $subjectName = $subject_name;
 
-        $marks = Mark::join('students', 'marks.student_id', '=', 'students.id')
+        $marks = Mark::select('students.name', 'students.group_id', 'subjects.subject_name', 'marks.mark', 'marks.given_at')
             ->join('subjects', 'marks.subject_id', '=', 'subjects.id')
-            ->select('students.name', 'students.group_id', 'subjects.subject_name', 'marks.mark', 'marks.given_at')
+            ->join('students', 'marks.student_id', '=', 'students.id')
             ->whereIn('marks.student_id', function ($query) {
                 $query->select('id')
                     ->from('students')
