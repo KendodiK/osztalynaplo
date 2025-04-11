@@ -31,13 +31,24 @@ $(document).ready(function () {
                         "</li>";
 
                     for (var i = 0; i < len; i++){
-                        toHtml += "<li><div>" + response[i].name + "</div></li>"
+                        toHtml += "<li><div>" + response[i].name + "</div><div id='classTableR-" + i + "' class='ClassTableR'></div></li>"
                     }
-
                     toHtml += "</ul>"
                     $('#teacherContent').html(toHtml);
+                    createClassTable(response);
                 }
             }
         })
     })
+
+    function createClassTable(data){
+        for(var i = 0; i < data.length; i++){
+            var row;
+            for(var j = 0; j < 10; j++){
+                row += "<div></div>"
+            }
+            var id = "#classTableR" + i
+            $(id).html(row);
+        }
+    }
 })
