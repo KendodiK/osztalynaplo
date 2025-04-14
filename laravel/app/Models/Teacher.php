@@ -35,7 +35,7 @@ class Teacher extends EloquentModel
                     ->from('subjects')
                     ->where('subject_id', $subjectId);
             })
-            ->orderBy('marks.given_at')
+            ->orderBy('students.name')
             ->get();
 
         return $marks;
