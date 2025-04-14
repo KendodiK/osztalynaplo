@@ -22,9 +22,19 @@ class MarkController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($marks)
     {
-        //
+        $mark= new Mark();
+        $grade = $marks;
+        
+        $mark->given_at=date('Y-m-d');
+        $mark->student_id=request('student_id');
+        $mark->subject_id = request('subject_id');
+        $mark->mark->$grade;
+
+        $mark->save();
+        return  route('teacher.groups'); 
+
     }
 
     /**
@@ -52,30 +62,6 @@ class MarkController extends Controller
         }*/
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
-
     public function tantargyakHozzaAdasa($mark)
     {
         /*foreach ($marks as $mark){
@@ -98,5 +84,35 @@ class MarkController extends Controller
         $AVG = Mark::AVGForSubjects($student->id);
         $marks = Mark::marksForStud($student->id);
         return view('studentPage.subjectMark', compact('student','AVG','marks'));
+    }
+
+    public function destroy($id){
+        $mark = Mark::find($id);
+        $mark->delete();
+        return redirect()->route('teacher.groups')->with('success', "Sikeresen Törölve");
+    }
+
+     
+
+    public function edit($id){
+        $mark = Mark::find($id);
+        return view('mark.edit', compact('marks'));
+    }
+    
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */ 
+
+    public function update(Request $request, $id){
+        $marks = Mark::find($id);
+        $marks->mark = $request->input('mark');
+        $marks->given_at = $request->input('given_at');
+
+        $marks->save();
+        return redirect()->route('teacher.groups')->with('success', "Sikeresen Módosítva");
     }
 }

@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use function PHPUnit\Framework\returnArgument;
 
 class Mark extends Model
 {
@@ -81,8 +83,37 @@ class Mark extends Model
         $mark->mark->$grade;
 
         $mark->save();
-        return  $mark; //ide nem mark kell hanem az a route amivel vissza tud tértni az oldalra,
-                       //  csak nem jöttem rá mekyik az és így legalább nem dob hibát xddd
+        return  route('teacher.groups'); 
 
+    }
+
+    public function destroy($id){
+        $mark = Mark::find($id);
+        $mark->delete();
+        return redirect()->route('teacher.groups')->with('success', "Sikeresen Törölve");
+    }
+
+     
+
+    public function edit($id){
+        $mark = Mark::find($id);
+        return view('Mark.edit', compact('marks'));
+    }
+    
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */ 
+
+    public function update(Request $request, $id){
+        $marks = Mark::find($id);
+        $marks->mark = $request->input('mark');
+        $marks->given_at = $request->input('given_at');
+
+        $marks->save();
+        return redirect()->route('teacher.groups')->with('success', "Sikeresen Módosítva");
     }
 }
