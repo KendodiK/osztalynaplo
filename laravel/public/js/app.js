@@ -28,6 +28,7 @@ $(document).ready(function () {
                         "<th>Ápr.</th>" +
                         "<th>Máj.</th>" +
                         "<th>Jun.</th>" +
+                        "<th>Átlag</th>"
                         "</tr></thead> <tbody>";
 
                     var cls = 'odd';
@@ -42,7 +43,7 @@ $(document).ready(function () {
                                 cls = 'odd-tr';
                             }
                             toHtml += "<tr class='" + cls + " stud-" + i + "' id='" + id + "'>" +
-                                "<td>" + response[i].name + "</td>" +
+                                "<td class='student-name'>" + response[i].name + "</td>" +
                                 "<td class='month1' id='month1'></td>" +
                                 "<td class='month2' id='month2'></td>" +
                                 "<td class='month3' id='month3'></td>" +
@@ -53,6 +54,7 @@ $(document).ready(function () {
                                 "<td class='month8' id='month8'></td>" +
                                 "<td class='month9' id='month9'></td>" +
                                 "<td class='month10' id='month10'></td>" +
+                                "<td class='avg'>" + response[i].avg + "</td>" +
                                 "</tr>"
                             id++;
                         }
@@ -60,8 +62,14 @@ $(document).ready(function () {
                     toHtml += "</tbody> </talbe>"
                     $('#teacherContent').html(toHtml);
 
+                    id = -1;
+                    last = " ";
                     for(var i = 0; i < len; i++){
-                        createClassTable(i, response[i].mark, response[i].given_at);
+                        if (response[i].name != last) {
+                            last = response[i].name;
+                            id += 1;
+                        }
+                        createClassTable(id, response[i].mark, response[i].given_at);
                     }
                 }
             }
@@ -77,7 +85,7 @@ $(document).ready(function () {
         var month = ['9', '10', '11', '12', '1', '2', '3', '4', '5', '6']
         for(var i = 0; i < month.length; i++) {
             if(month[i] == given){
-                $("#"+studentPlace+" #"+monthClass[i]).html(mark);
+                $("#"+studentPlace+" #"+monthClass[i]).append("<a> " + mark + "</a>");
             }
         }
     }

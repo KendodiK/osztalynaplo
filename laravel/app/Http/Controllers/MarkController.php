@@ -26,14 +26,14 @@ class MarkController extends Controller
     {
         $mark= new Mark();
         $grade = $marks;
-        
+
         $mark->given_at=date('Y-m-d');
         $mark->student_id=request('student_id');
         $mark->subject_id = request('subject_id');
         $mark->mark->$grade;
 
         $mark->save();
-        return  route('teacher.groups'); 
+        return  route('teacher.groups');
 
     }
 
@@ -53,13 +53,6 @@ class MarkController extends Controller
         $student = $this->getStudent();
         $marks = $student->marks;
         return view( 'studentPage.index', compact('marks', 'student'));
-
-        /*$marks = Mark::where('student_id', $id)->get();
-        foreach ($marks as $mark) {
-            $mark=$this->tantargyakHozzaAdasa($mark);
-            return view( 'studentPage.index', compact('mark'));
-
-        }*/
     }
 
     public function tantargyakHozzaAdasa($mark)
@@ -92,27 +85,27 @@ class MarkController extends Controller
         return redirect()->route('teacher.groups')->with('success', "Sikeresen Törölve");
     }
 
-     
+
 
     public function edit($id){
         $mark = Mark::find($id);
-        return view('mark.edit', compact('marks'));
+        return view('mark.edit', compact('mark'));
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */ 
+     */
 
     public function update(Request $request, $id){
-        $marks = Mark::find($id);
-        $marks->mark = $request->input('mark');
-        $marks->given_at = $request->input('given_at');
+        $mark = Mark::find($id);
+        $mark->mark = $request->input('mark');
+        $mark->given_at = $request->input('given_at');
 
-        $marks->save();
+        $mark->save();
         return redirect()->route('teacher.groups')->with('success', "Sikeresen Módosítva");
     }
 }

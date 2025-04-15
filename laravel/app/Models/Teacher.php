@@ -24,7 +24,7 @@ class Teacher extends EloquentModel
 
         $marks = Mark::join('students', 'marks.student_id', '=', 'students.id')
             ->join('subjects', 'marks.subject_id', '=', 'subjects.id')
-            ->select('students.name', 'students.group_id', 'subjects.subject_name', 'marks.mark', 'marks.given_at')
+            ->select('students.name', 'students.id as studentId', 'students.group_id', 'subjects.subject_name', 'marks.mark', 'marks.given_at')
             ->whereIn('marks.student_id', function ($query) use ($groupId) {
                 $query->select('id')
                     ->from('students')
@@ -37,6 +37,11 @@ class Teacher extends EloquentModel
             })
             ->orderBy('students.name')
             ->get();
+
+        $marks = $marks->map(function ($mark) use ($subjectId) {
+            $result = Mark::StudentAVGBySubject($mark->studentId, $subjectId);
+            $mark->avg = $result->average_mark;
+        });
 
         return $marks;
     }

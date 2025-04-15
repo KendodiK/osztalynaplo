@@ -27,7 +27,7 @@
     </div>
 </header>
 <main>
-    <div class="content" id="teacherContent">
+    <div class="content content-teacher" id="teacherContent">
     </div>
 </main>
 </body>

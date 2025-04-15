@@ -84,21 +84,6 @@ class StudentController extends Controller
 
     public  function showAllByGroupId($group_id, $subject_id)
     {
-        /*$students = Student::where('group_id', $group_id)->get();
-        $markAll = [];
-        $teacher = Session::get('teacher');
-        $subjectFC = ConnectSubjectsGroupTeacher::where('teacher_id', '=', $teacher->id)->where('group_id', '=', $group_id)->get();
-        foreach ($students as $student) {
-            $marks = ["$student->id" => Mark::marksForStud($student->id)];
-            foreach ($marks as $mark) {
-                $subjectN = $subjectFC->subject->subject_name;
-                $markN = $mark->subject->subject_name;
-                if ($subject->subject->subject_name == $mark->subject->subject_name) {
-                    array_push($markAll, $mark);
-                }
-            }
-            $markAll[$student->id][] = $markGood;
-        }*/
         $classData = Teacher::marksForSubjectByTeacher($group_id, $subject_id);
         return response()->json($classData);
     }
