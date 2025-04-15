@@ -28,7 +28,8 @@ $(document).ready(function () {
                         "<th>Ápr.</th>" +
                         "<th>Máj.</th>" +
                         "<th>Jun.</th>" +
-                        "<th>Átlag</th>"
+                        "<th>Átlag</th>" +
+                        "<th>Új</th>" +
                         "</tr></thead> <tbody>";
 
                     var cls = 'odd';
@@ -55,6 +56,7 @@ $(document).ready(function () {
                                 "<td class='month9' id='month9'></td>" +
                                 "<td class='month10' id='month10'></td>" +
                                 "<td class='avg'>" + response[i].average_mark + "</td>" +
+                                "<td class='add'><a href=\"{{route('marks.add')}}\">+</a></td>" + //route neve kell amire a hozzáadást akarjuk rakni
                                 "</tr>"
                             id++;
                         }
