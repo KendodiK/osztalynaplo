@@ -85,7 +85,7 @@ $(document).ready(function () {
         var month = ['9', '10', '11', '12', '1', '2', '3', '4', '5', '6']
         for(var i = 0; i < month.length; i++) {
             if(month[i] == given){
-                $("#"+studentPlace+" #"+monthClass[i]).append("<a href=\"{{route('marks.edit'), " + markId + "}}\"> " + mark + "</a>");
+                $("#"+studentPlace+" #"+monthClass[i]).append("<a href=" + markId + "/edit> "  + mark + "</a>");
             }
         }
     }
