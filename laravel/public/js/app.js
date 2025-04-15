@@ -54,7 +54,7 @@ $(document).ready(function () {
                                 "<td class='month8' id='month8'></td>" +
                                 "<td class='month9' id='month9'></td>" +
                                 "<td class='month10' id='month10'></td>" +
-                                "<td class='avg'>" + response[i].avg + "</td>" +
+                                "<td class='avg'>" + response[i].average_mark + "</td>" +
                                 "</tr>"
                             id++;
                         }
@@ -69,14 +69,14 @@ $(document).ready(function () {
                             last = response[i].name;
                             id += 1;
                         }
-                        createClassTable(id, response[i].mark, response[i].given_at);
+                        createClassTable(id, response[i].mark, response[i].given_at, response[i].markId);
                     }
                 }
             }
         })
     })
 
-    function createClassTable(studentPlace, mark, given_at){
+    function createClassTable(studentPlace, mark, given_at, markId){
         var given = given_at.substring(5,7);
         if(given[0] == '0'){
             given = given[1];
@@ -85,7 +85,7 @@ $(document).ready(function () {
         var month = ['9', '10', '11', '12', '1', '2', '3', '4', '5', '6']
         for(var i = 0; i < month.length; i++) {
             if(month[i] == given){
-                $("#"+studentPlace+" #"+monthClass[i]).append("<a href='{{route('mark.edit')}}'> " + mark + "</a>");
+                $("#"+studentPlace+" #"+monthClass[i]).append("<a href=\"{{route('marks.edit'), " + markId + "}}\"> " + mark + "</a>");
             }
         }
     }
