@@ -20,8 +20,10 @@ Route::get('teacher/groups', [TeacherController::class, 'getGroups'])->name('tea
 Route::get('group/groupMarks', [GroupController::class, 'getMarks'])->name('group.marks');
 Route::put('marks/update', [MarkController::class, 'update'])->name('marks.update');
 Route::post('marks/add', [MarkController::class, 'add'])->name('marks.add');
+Route::get('marks/give', [MarkController::class, 'create'])->name('marks.give');
 Route::delete('marks/delete', [MarkController::class, 'delete'])->name('marks.delete');
 Route::put('groups/update', [GroupController::class, 'update'])->name('groups.update');
 //Route::post('student/add', [GroupController::class, 'add'])->name('student.add');
 
+Route::get('teacher/{marksID}/edit', [MarkController::class, 'edit'])->name('marks.edit');
 Route::get('groups/{groupId}/{subjectId}/all', [StudentController::class, 'showAllByGroupId']);

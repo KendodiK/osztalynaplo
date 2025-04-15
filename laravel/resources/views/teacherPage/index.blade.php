@@ -23,6 +23,7 @@
                             {{$connection->group->number}}.{{$connection->group->sign}}: {{$connection->subject->subject_name}}
                         </button>
                 @endforeach
+                <a class="groupBtn" href="{{route('marks.add') }}">Jegy Hozzádadása</a>
         </nav>
     </div>
 </header>

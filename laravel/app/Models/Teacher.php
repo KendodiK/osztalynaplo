@@ -38,10 +38,10 @@ class Teacher extends EloquentModel
             ->orderBy('students.name')
             ->get();
 
-        $marks = $marks->map(function ($mark) use ($subjectId) {
+        /*$marks = $marks->map(function ($mark) use ($subjectId) {
             $result = Mark::StudentAVGBySubject($mark->studentId, $subjectId);
             $mark->avg = $result->average_mark;
-        });
+        });*/
 
         return $marks;
     }
