@@ -253,6 +253,10 @@ td {
     }
 }
 
-.student-name {
+.student-name{
+    text-align: center;
+}
+
+.add a {
     text-align: center;
 }
