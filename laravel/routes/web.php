@@ -10,8 +10,8 @@ Route::get('/', function () { return view('home'); })->name('home');
 
 Route::get('/login/student', function () {return view('studentPage.login');})->name('loginStudent');
 Route::get('/login/teacher', function () {return view('teacherPage.login');})->name('loginTeacher');
-Route::post('/student/login', [StudentController::class, 'login'])->name('student.login');
-Route::post('/teacher/login', [TeacherController::class, 'login'])->name('teacher.login');
+Route::get('/student/login', [StudentController::class, 'login'])->name('student.login');
+Route::get('/teacher/login', [TeacherController::class, 'login'])->name('teacher.login');
 
 Route::get('/login/student/marks', [MarkController::class, 'show'])->name('student.marks');
 Route::get('group/subjects', [MarkController::class, 'showGroupMarks'])->name('mark.subjects');
