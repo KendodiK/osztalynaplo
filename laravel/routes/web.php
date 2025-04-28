@@ -11,14 +11,14 @@ Route::get('/', function () { return view('home'); })->name('home');
 Route::get('/login/student', function () {return view('studentPage.login');})->name('loginStudent');
 Route::get('/login/teacher', function () {return view('teacherPage.login');})->name('loginTeacher');
 Route::get('/student/login', [StudentController::class, 'login'])->name('student.login');
-Route::get('/teacher/login', [TeacherController::class, 'login'])->name('teacher.login');
+Route::get('/teacher/login/', [TeacherController::class, 'login'])->name('teacher.login');
 
 Route::get('/login/student/marks', [MarkController::class, 'show'])->name('student.marks');
 Route::get('group/subjects', [MarkController::class, 'showGroupMarks'])->name('mark.subjects');
 
 Route::get('teacher/groups', [TeacherController::class, 'getGroups'])->name('teacher.groups');
 Route::get('group/groupMarks', [GroupController::class, 'getMarks'])->name('group.marks');
-Route::put('marks/update', [MarkController::class, 'update'])->name('marks.update');
+Route::patch('marks/update/{id}', [MarkController::class, 'update'])->name('marks.update');
 Route::post('marks/add', [MarkController::class, 'add'])->name('marks.add');
 Route::get('marks/give', [MarkController::class, 'create'])->name('marks.give');
 Route::delete('marks/delete', [MarkController::class, 'delete'])->name('marks.delete');

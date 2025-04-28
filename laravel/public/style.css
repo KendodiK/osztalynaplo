@@ -260,3 +260,47 @@ td {
 .add a {
     text-align: center;
 }
+
+.display-subject {
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 2vw;
+}
+
+.editable {
+    display: flex;
+}
+
+.set-mark-time {
+    margin-bottom: 1vw;
+
+    label {
+        margin-right: 1vw;
+    }
+
+    input {
+        margin-right: 2vw;
+    }
+}
+
+.set-mark {
+    label {
+        margin-right: 1vw;
+    }
+
+    input {
+        width: 2vw;
+        text-align: center;
+    }
+}
+
+.save-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        margin: 1vw;
+        font-size: medium;
+    }
+}

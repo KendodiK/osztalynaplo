@@ -101,11 +101,14 @@ class MarkController extends Controller
      */
 
     public function update(Request $request, $id){
-        $mark = Mark::find($id);
-        $mark->mark = $request->input('mark');
-        $mark->given_at = $request->input('given_at');
+        if(request()->has('save')) {
+            $mark = Mark::find($id);
+            $mark->mark = $request->input('mark');
+            $mark->given_at = $request->input('date');
 
-        $mark->save();
-        return redirect()->route('teacher.groups')->with('success', "Sikeresen Módosítva");
+            $mark->save();
+        }
+
+        return redirect()->route('teacher.login',)->with('success');
     }
 }

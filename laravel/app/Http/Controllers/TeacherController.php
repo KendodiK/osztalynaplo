@@ -22,7 +22,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -65,18 +65,27 @@ class TeacherController extends Controller
 
     }
 
-    public  function login()
+    public static function login(Request $request, $found = false)
     {
-        $teachers = Teacher::all();
-        $name = request('name');
-        $code = request('code');
-        foreach ($teachers as $teacher) {
-            if ($teacher->name == $name && $teacher->identification_code == $code) {
-                $connections = ConnectSubjectsGroupTeacherConroller::getByTeacher($teacher->id);
-                Session::put('teacher', $teacher);
-                return view('teacherPage.index', compact('connections'));
+        if(!$found){
+            $teachers = Teacher::all();
+            $name = request('name');
+            $code = request('code');
+            foreach ($teachers as $teacher) {
+                if ($teacher->name == $name && $teacher->identification_code == $code) {
+                    Session::put('teacher', $teacher);
+                    $found = true;
+                }
             }
         }
-        return view('teacherPage.login')->with('errors', 'Nincs a megadottaknak megfelelő tanár');
+
+        if ($found){
+            $teacherId = $request->session()->get('teacher')->id;
+            $connections = ConnectSubjectsGroupTeacherConroller::getByTeacher($teacherId);
+            return view('teacherPage.index', compact('connections'));
+        }
+        else {
+            return view('teacherPage.login')->with('errors', 'Nincs a megadottaknak megfelelő tanár');
+        }
     }
 }
