@@ -19,6 +19,7 @@ Route::get('group/subjects', [MarkController::class, 'showGroupMarks'])->name('m
 Route::get('teacher/groups', [TeacherController::class, 'getGroups'])->name('teacher.groups');
 Route::get('group/groupMarks', [GroupController::class, 'getMarks'])->name('group.marks');
 Route::patch('marks/update/{id}', [MarkController::class, 'update'])->name('marks.update');
+Route::get('teacher/login/{found}',  [TeacherController::class, 'login'])->name('teacher.site');
 Route::post('marks/add', [MarkController::class, 'add'])->name('marks.add');
 Route::get('marks/give', [MarkController::class, 'create'])->name('marks.give');
 Route::delete('marks/delete', [MarkController::class, 'delete'])->name('marks.delete');

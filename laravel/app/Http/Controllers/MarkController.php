@@ -108,7 +108,6 @@ class MarkController extends Controller
 
             $mark->save();
         }
-
-        return redirect()->route('teacher.login',)->with('success');
+        return redirect()->route('teacher.site', true)->with('success');
     }
 }
