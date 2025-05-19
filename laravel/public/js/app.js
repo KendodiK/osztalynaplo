@@ -56,8 +56,8 @@ $(document).ready(function () {
                                 "<td class='month9' id='month9'></td>" +
                                 "<td class='month10' id='month10'></td>" +
                                 "<td class='avg'>" + response[i].average_mark + "</td>" +
-                                "<td class='add'><a href=\"{{route('marks.edit')}}\">+</a></td>" + //route neve kell amire a hozzáadást akarjuk rakni
-                                "</tr>"
+                                "<td class='add'><a href=/student/" + response[i].subject_name + "/" +
+                                response[i].studentId + "/add>+</a></td></tr>"
                             id++;
                         }
                     }

@@ -110,4 +110,30 @@ class MarkController extends Controller
         }
         return redirect()->route('teacher.site', true)->with('success');
     }
+
+    public function addMark($subjectName, $studentId)
+    {
+        $student = Student::find($studentId);
+        $subject = Subject::where('subject_Name', "=", $subjectName)->first();
+        return view('teacherPage.create', compact('student', 'subject'));
+    }
+
+    public function add(Request $request)
+    {
+        if(request()->has('save')) {
+            $mark = new Mark();
+
+            $date = $request->input('date');
+            if($date == null) {
+                $date = date('Y-m-d');
+            }
+            $mark->given_at = $date;
+            $mark->student_id = $request->input('student');
+            $mark->subject_id = $request->input('subject');
+            $mark->mark = $request->input('mark');
+            $mark->save();
+        }
+
+        return redirect()->route('teacher.site', true)->with('success');
+    }
 }
