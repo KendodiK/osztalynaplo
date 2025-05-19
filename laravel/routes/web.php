@@ -28,3 +28,5 @@ Route::put('groups/update', [GroupController::class, 'update'])->name('groups.up
 Route::get('teacher/{marksId}/edit', [MarkController::class, 'edit'])->name('marks.edit');
 Route::get('student/{subject}/{studentId}/add', [MarkController::class, 'addMark'])->name('student.addMark');
 Route::get('groups/{groupId}/{subjectId}/all', [StudentController::class, 'showAllByGroupId']);
+
+Route::get('teacher/student', [StudentController::class, 'getStudentByTeacher'])->name('student.getByTeacher');

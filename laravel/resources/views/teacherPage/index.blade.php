@@ -23,6 +23,12 @@
                             {{$connection->group->number}}.{{$connection->group->sign}}: {{$connection->subject->subject_name}}
                         </button>
                 @endforeach
+                <div class="searchDiv">
+                    <form action="{{route('student.getByTeacher')}}">
+                        <input type="text" name="searched" id="searched">
+                        <button class="groupBtn searchBtn" type="submit" name="search" id="search">Kersés</button>
+                    </form>
+                </div>
         </nav>
     </div>
 </header>

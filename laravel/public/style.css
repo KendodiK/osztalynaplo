@@ -99,6 +99,13 @@ li {
     height: 100%;
 }
 
+.searchDiv {
+    margin-right: 0;
+    float: right;
+    display: block;
+    width: 16vw;
+}
+
 .groupBtn  {
     background: rgb(43, 43, 43);
     border: 1px solid red;
@@ -111,6 +118,11 @@ li {
     padding-left: 1%;
     width: 10%;
     height: 100%;
+}
+
+.searchBtn {
+    width: fit-content;
+    margin-left: 0;
 }
 
 .content {
