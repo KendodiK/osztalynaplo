@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
 <header>
     <div class="menu">
         <nav>
@@ -33,7 +34,14 @@
     </div>
 </header>
 <main>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{session('success')}}
+        </div>
+    @endif
+
     <div class="content content-teacher" id="teacherContent">
+        @yield('content')
     </div>
 </main>
 </body>
