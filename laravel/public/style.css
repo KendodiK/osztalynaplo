@@ -265,10 +265,10 @@ td {
     width: 100%;
     text-align: center;
     font-size: x-large;
-    margin-bottom: 2vw;
 }
 
 .editable {
+    margin-top: 2vw;
     display: flex;
 }
 
@@ -303,4 +303,10 @@ td {
         margin: 1vw;
         font-size: medium;
     }
+}
+
+.add-name {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
 }
