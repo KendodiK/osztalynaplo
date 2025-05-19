@@ -4,8 +4,12 @@
     <div class="student-data">
         <div class="name">{{$student->name}}</div>
         <div class="class">{{$student->group->number}}.{{$student->group->sign}}</div>
+        <a class="groupBtn" href="{{ route('home',['sort_by' => 'name','sort_dir' => 'asc']) }}" title="ABC">↑</a>
+        <a class="groupBtn" href="{{ route('home',['sort_by' => 'name','sort_dir' => 'desc']) }}" title="ZYX">↓</a>
     </div>
+
         <ul class="student-table">
+
             @foreach($AVG as $average)
                 <li class="row {{ $loop->iteration % 2 == 0 ? 'even' : 'odd' }}">
                     <div class="student-by-subj-table">
