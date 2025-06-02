@@ -92,24 +92,16 @@ class StudentController extends Controller
 
     public  function  getStudentByTeacher(Request $request)
     {
-        $name = $request->input('searched');
-        $student = Student::where('name', $name)->firstOrFail();
-
-        if(!is_a($student, ModelNotFoundException::class)) {
-            $valid = false;
-            $teacherId = Session::get('teacher')->id;
-            $connections = ConnectSubjectsGroupTeacher::where('teacher_id', $teacherId)->get();
-            foreach ($connections as $conncection) {
-                if ($conncection->group_id == $student->group_id) {
-                    $valid = true;
-                }
-            }
-            if ($valid) {
-                $connections = array_values(array_filter($connections, function ($connection) use ($student) {
-                    return $connection->subject_id == $student->subject_id;
-                }));
-                return view('teacherPage.student', compact('student', 'connections'));
-            }
+        $teacher = Session::get('teacher');
+        $name = $request->get('searched');
+        $students = Student::join('connect_subjects_group_teachers as CSG', 'CSG.group_id', '=', 'students.group_id')
+            ->where('students.name', 'like', '%'.$name.'%')
+            ->where('CSG.teacher_id', $teacher->id)
+            ->select('students.*')
+            ->get();
+        $connections = ConnectSubjectsGroupTeacherConroller::getByTeacher($teacher->id);
+        if ($students != null) {
+            return view('teacherPage.student', compact('students', 'connections'));
         }
         return view('teacherPage.login', true)->with('errors', 'A tanítványok között nem szerepel a keresett diák');
     }
